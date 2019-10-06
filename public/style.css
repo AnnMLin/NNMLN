@@ -1,0 +1,35 @@
+body {
+  background-color: aquamarine;
+  margin: 0px;
+  font-family: 'Questrial', sans-serif;
+}
+
+#app-container {
+  /* height: 100vh;
+  width: 100%; */
+  display: flex;
+  flex-direction: row;
+}
+
+.quick-link-icon {
+  width:50%;
+}
+
+#side-bar {
+  background-color: darkolivegreen;
+  color: white;
+  height: 100vh;
+  width: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#side-bar-content {
+  height: 27%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}  
