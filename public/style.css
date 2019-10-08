@@ -1,7 +1,27 @@
+/* COLOR CODES
+#EFDCBC #C2C5B0 #D6B5A2 #557580
+#B5A162 #D0B48D #CBC29B #A24D38 #2D3424
+#0D5661 #9F353A #D7B98E #4F726C
+*/
+
+:root {
+  --side-bar-width: 4vw;
+  --nav-bar-height: 5.8vw;
+}
+
 body {
-  background-color: aquamarine;
+  background-color: #D7B98E;
   margin: 0px;
   font-family: 'Questrial', sans-serif;
+}
+
+div {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 #app-container {
@@ -11,21 +31,87 @@ body {
   flex-direction: row;
 }
 
-.quick-link-icon {
-  width:50%;
-}
-
-#side-bar {
-  background-color: darkolivegreen;
-  color: white;
+#home-page {
   height: 100vh;
-  width: 4vw;
+  width: calc(100vw - var(--side-bar-width));
+  margin-left: var(--side-bar-width);
+  padding: 0 5vw;
+  font-size: 17vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 }
 
+#main {
+  /* position: absolute; */
+  height: calc(100vh - var(--nav-bar-height) - 3vw);
+  width: calc(100vw - var(--side-bar-width));
+  margin: var(--nav-bar-height) var(--side-bar-width) 0 var(--side-bar-width);
+  /* margin-top: var(--nav-bar-height); */
+  padding: 3vw 5vw 0 5vw;
+  font-size: 17vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#welcome {
+  
+}
+
+.big-letters {
+  padding: 0.05em 0;
+  margin: 0 0;
+}
+
+#nav-bar {
+  position: absolute;
+  width: 100vw;
+  height: var(--nav-bar-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#nav-bar-content {
+  width: 50em;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nav-wings {
+  display: flex;
+  padding-bottom: 0.6em;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0px 0.5em;
+  padding: 0px 1em;
+  font-size: 18px;
+}
+
+#home {
+  font-size: 2.3em;
+}
+
+#side-bar {
+  position: fixed;
+  /* background-color: #9F353A; */
+  color: white;
+  height: 100vh;
+  width: var(--side-bar-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border-right: solid; */
+}
+
 #side-bar-content {
+  position: relative;
   height: 27%;
   width: 100%;
   display: flex;
@@ -33,3 +119,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }  
+
+.quick-link-icon {
+  width:50%;
+}
