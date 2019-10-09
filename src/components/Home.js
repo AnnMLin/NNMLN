@@ -4,12 +4,16 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return(
     <div id='home-page'>
-      <div id='welcome'>
+      <div>
         <div className='big-letters'>
-          <Link to='/projects'>PROJECTS</Link>
+          <Link className='big-letters-link' to='/projects'>PROJECTS</Link>
         </div>
-        <div className='big-letters'>ABOUT</div>
-        <div className='big-letters'>CONTACT</div>
+        <div className='big-letters'>
+          <Link className='big-letters-link' to='/about'>ABOUT</Link>
+        </div>
+        <div className='big-letters'>
+          <Link className='big-letters-link' to='/contact'>CONTACT</Link>
+        </div>
       </div>
     </div>
   )
