@@ -69,6 +69,10 @@ div {
   margin: -0.1em;
 }
 
+.content {
+  overflow: hidden;
+}
+
 #nav-bar {
   position: absolute;
   width: 100vw;
