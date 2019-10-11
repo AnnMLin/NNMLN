@@ -4,22 +4,22 @@ import { Projects, About, Contact, Toggle } from '../components'
 const Home = () => {
   
   const [show, setShow] = useState('')
-
+  console.log('show:', show)
   const handleClick = e => {
     console.log(e.target.title)
-    show === e.target.title ? setShow('') : setShow(e.target.title)
+    show && show === e.target.title ? setShow('') : setShow(e.target.title)
   }
   
   return(
     <div id='home-page'>
       <div>
-        <Toggle name='PROJECTS' handleClick={handleClick}>
+        <Toggle name='PROJECTS' handleClick={handleClick} isOpen={show === 'PROJECTS' ? true : false}>
           <Projects />
         </Toggle>
-        <Toggle name='ABOUT' handleClick={handleClick}>
+        <Toggle name='ABOUT' handleClick={handleClick} isOpen={show === 'ABOUT' ? true : false}>
           <About />
         </Toggle>
-        <Toggle name='CONTACT' handleClick={handleClick}>
+        <Toggle name='CONTACT' handleClick={handleClick} isOpen={show === 'CONTACT' ? true : false}>
           <Contact />
         </Toggle>
       </div>
