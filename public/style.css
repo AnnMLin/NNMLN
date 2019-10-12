@@ -22,6 +22,7 @@ div {
 /* a {
   color: inherit;
   text-decoration: inherit;
+  display: block;
 } */
 
 #app-container {
@@ -36,7 +37,7 @@ div {
   width: calc(100vw - var(--side-bar-width));
   margin-left: var(--side-bar-width);
   padding: 0 5vw;
-  font-size: 17vw;
+  font-size: 16.9vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -71,6 +72,7 @@ div {
 
 .content {
   overflow: hidden;
+  font-size: 20px;
 }
 
 #nav-bar {

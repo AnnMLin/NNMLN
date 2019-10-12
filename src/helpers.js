@@ -1,13 +1,14 @@
-/*from react-spring example*/
 import React, { useState, useRef, useEffect } from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
 
+/*from react-spring example*/
 export function usePrevious(value) {
   const ref = useRef()
   useEffect(() => void (ref.current = value), [value])
   return ref.current
 }
 
+/*from react-spring example*/
 export function useMeasure() {
   const ref = useRef()
   const [bounds, set] = useState({ left: 0, top: 0, width: 0, height: 0 })
@@ -21,4 +22,9 @@ export function useMeasure() {
   // Then in componentDidMount, ro will observe current div and call callback on it
   // Ro callback will get the contentRect of the current div and set it to bounds on state
   // Finally, extract 'viewHeight' from height from bounds
+}
+
+export const scrollToRef = (ref) => {
+  console.log('REF:', ref)
+  window.scrollTo(0, ref.current.offsetTop)
 }
