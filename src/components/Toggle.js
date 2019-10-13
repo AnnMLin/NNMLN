@@ -7,14 +7,14 @@ const Toggle = memo(({ children, name, isOpen = false, handleClick, r }) => {
   const [bind, { height: viewHeight}] = useMeasure()
   
   const { height, opacity } = useSpring({
-    from: { height: 0, opacity : 0 },
+    from: { height: isOpen ? 0 : viewHeight, opacity : isOpen ? 0 : 1 },
     to: { height: isOpen ? viewHeight : 0, opacity: isOpen ? 1 : 0 }
   })
 
   return (
     <div ref={r} className='big-letters'>
       <div className='big-letters-link' onClick={handleClick} title={name}>{name}</div>
-      <animated.div className='content' style={{ opacity, height: isOpen && previous.current === isOpen ? 'auto' : height }}>
+      <animated.div className='content' style={{ opacity, height }}>
         <div {...bind} children={children} />
       </animated.div>
     </div>
