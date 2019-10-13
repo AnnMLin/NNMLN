@@ -3,7 +3,7 @@ import {useMeasure, usePrevious} from '../helpers.js'
 import {useSpring, animated} from 'react-spring'
 
 const Toggle = memo(({ children, name, isOpen = false, handleClick, r }) => {
-  const previous = usePrevious(isOpen)
+  
   const [bind, { height: viewHeight}] = useMeasure()
   
   const { height, opacity } = useSpring({

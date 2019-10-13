@@ -67,7 +67,7 @@ div {
 
 .big-letters-link::after {
   content: '';
-  margin: -0.1em;
+  margin: -0.095em;
 }
 
 .content {
