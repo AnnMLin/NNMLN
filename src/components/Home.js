@@ -10,7 +10,7 @@ const Home = () => {
     const target = e.target
     setTimeout(() => {
       // window.location.assign(`#${id}`)
-      target.scrollIntoView({behavior: 'smooth'})
+      target.scrollIntoView({behavior: 'smooth', block: 'start'})
     }, 400)
   }
   
