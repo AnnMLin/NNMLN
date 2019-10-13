@@ -23,8 +23,3 @@ export function useMeasure() {
   // Ro callback will get the contentRect of the current div and set it to bounds on state
   // Finally, extract 'viewHeight' from height from bounds
 }
-
-export const scrollToRef = (ref) => {
-  console.log('REF:', ref)
-  window.scrollTo(0, ref.current.offsetTop)
-}
