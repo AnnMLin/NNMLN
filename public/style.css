@@ -19,11 +19,11 @@ div {
   display: block;
 }
 
-/* a {
+a {
   color: inherit;
   text-decoration: inherit;
   display: block;
-} */
+}
 
 #app-container {
   /* height: 100vh;

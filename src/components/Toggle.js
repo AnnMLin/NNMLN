@@ -12,8 +12,8 @@ const Toggle = memo(({ children, name, isOpen = false, handleClick, r }) => {
   })
 
   return (
-    <div ref={r} className='big-letters'>
-      <div className='big-letters-link' onClick={handleClick} title={name}>{name}</div>
+    <div id={`${name}`} ref={r} className='big-letters'>
+      <a href={`#${name}`} className='big-letters-link' onClick={handleClick} title={name}>{name}</a>
       <animated.div className='content' style={{ opacity, height }}>
         <div {...bind} children={children} />
       </animated.div>

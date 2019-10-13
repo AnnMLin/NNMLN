@@ -13,18 +13,17 @@ const Home = () => {
     show && show === e.target.title ? setShow('') : setShow(e.target.title)
   }
 
-  useEffect(() => {
-    console.log('SHOW: ', show)
-    console.log(projects.current.offsetTop,about.current.offsetTop,contact.current.offsetTop)
-    const scrolltosection = () => {
-      if (show) {
-        if(show === 'PROJECTS') scrollToRef(projects)
-        if(show === 'ABOUT') scrollToRef(about)
-        if(show === 'CONTACT') scrollToRef(contact)
-      }
-    }
-    window.setTimeout(scrolltosection, 400)
-  }, [show])
+  // useEffect(() => {
+  //   console.log('SHOW: ', show)
+  //   const scrolltosection = () => {
+  //     if (show) {
+  //       if(show === 'PROJECTS') scrollToRef(projects)
+  //       if(show === 'ABOUT') scrollToRef(about)
+  //       if(show === 'CONTACT') scrollToRef(contact)
+  //     }
+  //   }
+  //   window.setTimeout(scrolltosection, 400)
+  // }, [show])
   
   return(
     <div id='home-page'>
