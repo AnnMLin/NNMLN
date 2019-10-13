@@ -7,8 +7,10 @@ const Home = () => {
   
   const handleClick = (e, id) => {
     show && show === e.target.title ? setShow('') : setShow(e.target.title)
+    const target = e.target
     setTimeout(() => {
-      window.location.assign(`#${id}`)
+      // window.location.assign(`#${id}`)
+      target.scrollIntoView({behavior: 'smooth'})
     }, 400)
   }
   

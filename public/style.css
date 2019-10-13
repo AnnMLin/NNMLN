@@ -156,3 +156,7 @@ a {
   transition: 1s;
   overflow: hidden;
 }
+
+#PROJECTS, #ABOUT, #CONTACT {
+  animation: response 1.6s;
+}
