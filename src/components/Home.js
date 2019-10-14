@@ -1,5 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
 import { Projects, About, Contact, Toggle } from '../components'
+import $ from "jquery"
 
 const Home = () => {
   
@@ -10,7 +11,20 @@ const Home = () => {
     const target = e.target
     setTimeout(() => {
       // window.location.assign(`#${id}`)
-      target.scrollIntoView({behavior: 'smooth', block: 'start'})
+      // document.getElementById(id).scrollIntoView({behavior: 'smooth', block: 'start'})
+      $('html, body').animate({
+        scrollTop: $(`#${id}`).offset().top
+      }, 1800, () => {
+        // const currTab = $(`#${id}`)
+        // currTab.focus()
+        // if (currTab.is(":focus")) { // Checking if the target was focused
+        //   return false;
+        // } else {
+        //   currTab.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+        //   currTab.focus(); // Set focus again
+        // };
+
+      })
     }, 400)
   }
   
