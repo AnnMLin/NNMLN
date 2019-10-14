@@ -2,13 +2,6 @@ import React, { useState, useRef, useEffect } from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
 
 /*from react-spring example*/
-export function usePrevious(value) {
-  const ref = useRef()
-  useEffect(() => void (ref.current = value), [value])
-  return ref.current
-}
-
-/*from react-spring example*/
 export function useMeasure() {
   const ref = useRef()
   const [bounds, set] = useState({ left: 0, top: 0, width: 0, height: 0 })

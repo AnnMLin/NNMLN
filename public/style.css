@@ -144,19 +144,3 @@ a {
   padding: 3vw 5vw 0 5vw;
   font-size: 17px;
 }
-
-.section-expand {
-  height: 100px;
-  transition: 1s;
-  overflow: hidden;
-}
-
-.section-collapse {
-  height: 0px;
-  transition: 1s;
-  overflow: hidden;
-}
-
-#PROJECTS, #ABOUT, #CONTACT {
-  animation: response 1.6s;
-}
