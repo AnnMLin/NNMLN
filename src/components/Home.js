@@ -1,41 +1,30 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React, {useState} from 'react'
 import { Projects, About, Contact, Toggle } from '../components'
-import { scrollToRef } from '../helpers.js'
+import $ from "jquery"
 
 const Home = () => {
   
   const [show, setShow] = useState('')
-  const projects = useRef(null)
-  const about = useRef(null)
-  const contact = useRef(null)
   
-  const handleClick = e => {
+  const handleClick = (e, id) => {
     show && show === e.target.title ? setShow('') : setShow(e.target.title)
+    setTimeout(() => {
+      $('html, body').animate({
+        scrollTop: $(`#${id}`).offset().top
+      }, 1200)
+    }, 1100)
   }
-
-  useEffect(() => {
-    console.log('SHOW: ', show)
-    console.log(projects.current.offsetTop,about.current.offsetTop,contact.current.offsetTop)
-    const scrolltosection = () => {
-      if (show) {
-        if(show === 'PROJECTS') scrollToRef(projects)
-        if(show === 'ABOUT') scrollToRef(about)
-        if(show === 'CONTACT') scrollToRef(contact)
-      }
-    }
-    window.setTimeout(scrolltosection, 400)
-  }, [show])
   
   return(
     <div id='home-page'>
       <div>
-        <Toggle name='PROJECTS' r={projects} handleClick={handleClick} isOpen={show === 'PROJECTS' ? true : false}>
+        <Toggle name='PROJECTS' handleClick={handleClick} isOpen={show === 'PROJECTS'}>
           <Projects />
         </Toggle>
-        <Toggle name='ABOUT' r={about} handleClick={handleClick} isOpen={show === 'ABOUT' ? true : false}>
+        <Toggle name='ABOUT' handleClick={handleClick} isOpen={show === 'ABOUT'}>
           <About />
         </Toggle>
-        <Toggle name='CONTACT' r={contact} handleClick={handleClick} isOpen={show === 'CONTACT' ? true : false}>
+        <Toggle name='CONTACT' handleClick={handleClick} isOpen={show === 'CONTACT'}>
           <Contact />
         </Toggle>
       </div>

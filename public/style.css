@@ -7,10 +7,11 @@
 :root {
   --side-bar-width: 4vw;
   --nav-bar-height: 5.8vw;
+  --content-padding: 1vw;
 }
 
 body {
-  background-color: #D7B98E;
+  background-color: #3FEEE6;
   margin: 0px;
   font-family: 'Questrial', sans-serif;
 }
@@ -19,11 +20,11 @@ div {
   display: block;
 }
 
-/* a {
+a {
   color: inherit;
   text-decoration: inherit;
   display: block;
-} */
+}
 
 #app-container {
   /* height: 100vh;
@@ -57,6 +58,7 @@ div {
 }
 
 .big-letters-link:hover {
+  color: #EA5EF2;
   cursor: pointer;
 }
 
@@ -70,10 +72,84 @@ div {
   margin: -0.095em;
 }
 
-.content {
+.animated-div {
   overflow: hidden;
   font-size: 20px;
 }
+
+.content-container {
+  /* background:black; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* padding: 5em 1em; */
+}
+
+.content {
+  padding: 5em 1em 3em 1em;
+  /* background: #557580; */
+}
+
+.project-item {
+  /* background: #D0B48D; */
+  display: flex;
+}
+
+.cover-photo-item {
+  /* background: #4F726C; */
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+
+.cover-photo {
+  /* width: 40vw;
+  box-sizing: border-box; */
+  width: calc(100% - 2*var(--content-padding));
+  padding: var(--content-padding);
+}
+
+.text-field {
+  /* background: #9F353A; */
+  width: calc(100% - 40vw);
+  /* padding:1vw */
+}
+
+.desc {
+  padding: var(--content-padding);
+}
+
+.tech {
+  padding: var(--content-padding);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.tech-item, .link-item {
+  font-size: 16px;
+}
+
+.tech-keyword, .link-name {
+  margin: 0.1em;
+  padding: 0.3em 0.5em;
+  border: solid 0.5px;
+  border-radius: 3px;
+}
+
+.link {
+  padding: var(--content-padding);
+}
+
+.link > img {
+  width: 1.5em;
+}
+
+/* .title {
+  font-size: 37px;
+} */
 
 #nav-bar {
   position: absolute;
@@ -143,16 +219,4 @@ div {
   /* margin-top: var(--nav-bar-height); */
   padding: 3vw 5vw 0 5vw;
   font-size: 17px;
-}
-
-.section-expand {
-  height: 100px;
-  transition: 1s;
-  overflow: hidden;
-}
-
-.section-collapse {
-  height: 0px;
-  transition: 1s;
-  overflow: hidden;
 }

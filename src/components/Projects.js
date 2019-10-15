@@ -2,14 +2,57 @@ import React from 'react'
 
 const Projects = () => {
   return(
-    <div>
-      <div>Projects!</div>
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In eu mi bibendum neque egestas. Scelerisque viverra mauris in aliquam sem. Elit sed vulputate mi sit amet. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis. In massa tempor nec feugiat nisl pretium fusce. Diam phasellus vestibulum lorem sed risus ultricies. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Mattis molestie a iaculis at erat pellentesque. Fusce id velit ut tortor pretium. Nec sagittis aliquam malesuada bibendum arcu vitae. Lorem mollis aliquam ut porttitor leo a diam. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Enim diam vulputate ut pharetra sit amet aliquam. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Venenatis cras sed felis eget velit.</p>
-
-        <p>A pellentesque sit amet porttitor eget. Eget nulla facilisi etiam dignissim diam quis. At varius vel pharetra vel turpis nunc eget. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Id leo in vitae turpis massa sed elementum tempus. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Elit duis tristique sollicitudin nibh sit. Magna etiam tempor orci eu lobortis elementum. Vitae elementum curabitur vitae nunc. Placerat in egestas erat imperdiet sed euismod nisi porta. Ultricies leo integer malesuada nunc. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. Ut sem viverra aliquet eget. Sem viverra aliquet eget sit amet tellus cras. Amet mattis vulputate enim nulla aliquet porttitor. Cursus risus at ultrices mi tempus imperdiet nulla. Sit amet mauris commodo quis imperdiet massa. At lectus urna duis convallis convallis tellus id. Augue eget arcu dictum varius duis at consectetur.</p>
-      
-        <p>Non diam phasellus vestibulum lorem sed. At imperdiet dui accumsan sit. Mi eget mauris pharetra et ultrices neque ornare. Et tortor at risus viverra. Enim facilisis gravida neque convallis a cras. Pellentesque adipiscing commodo elit at imperdiet. Lacus viverra vitae congue eu consequat. Interdum posuere lorem ipsum dolor sit. Justo nec ultrices dui sapien eget mi proin sed libero. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Ultrices in iaculis nunc sed augue lacus viverra vitae. Pellentesque massa placerat duis ultricies lacus sed turpis. Posuere ac ut consequat semper viverra nam libero justo laoreet. Bibendum ut tristique et egestas. Nisi est sit amet facilisis.</p>
+    <div className='content-container'>
+      <div className='content'>
+        <div className='project-item'>
+          <div className='cover-photo-item'>
+            <img className='cover-photo' src='./images/placeholder.jpg' alt='Build-A-Mate project'/>
+          </div>
+          <div className='text-field'>
+            {/* <div className='title'>Build-A-Mate</div> */}
+            <div className='desc'>
+            An online dating application that is here not only to revolutionize online dating but also make it fun. It allows a user to sign up, take a selfie and design an ideal type of appearance they are looking for. Once completed, the user will be able to browse through profiles that match the user's designed type. Using machine learning libraries and our interactive drag and drop interface, we help a user find their perfect match by letting them build their ideal face. 
+            </div>
+            <div className='tech'>
+              <div className='tech-item'>
+                <div className='tech-keyword'>HTML</div>
+              </div>
+              <div className='tech-item'>
+                <div className='tech-keyword'>CSS</div>
+              </div>
+              <div className='tech-item'>
+                <div className='tech-keyword'>Javascript</div>
+              </div>
+              <div className='tech-item'>
+                <div className='tech-keyword'>Node.js</div>
+              </div>
+              <div className='tech-item'>
+                <div className='tech-keyword'>React</div>
+              </div>
+              <div className='tech-item'>
+                <div className='tech-keyword'>Redux</div>
+              </div>
+              <div className='tech-item'>
+                <div className='tech-keyword'>Express</div>
+              </div>
+              <div className='tech-item'>
+                <div className='tech-keyword'>Sequelize</div>
+              </div>
+              <div className='tech-item'>
+                <div className='tech-keyword'>React DnD</div>
+              </div>
+              <div className='tech-item'>
+                <div className='tech-keyword'>MaterialUI</div>
+              </div>
+              <div className='tech-item'>
+                <div className='tech-keyword'>Face-api.js</div>
+              </div>
+            </div>
+            <div className='link'> 
+              <img className='quick-link-icon' src="./icons/github-5.png" alt='link to Github'/>
+            </div>
+          </div>
+        </div>
       </div>
     </div> 
   )

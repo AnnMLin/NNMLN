@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return(
-    <div>
+    <div className='content'>
       <div>About!</div>
       <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In eu mi bibendum neque egestas. Scelerisque viverra mauris in aliquam sem. Elit sed vulputate mi sit amet. Fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis. In massa tempor nec feugiat nisl pretium fusce. Diam phasellus vestibulum lorem sed risus ultricies. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Mattis molestie a iaculis at erat pellentesque. Fusce id velit ut tortor pretium. Nec sagittis aliquam malesuada bibendum arcu vitae. Lorem mollis aliquam ut porttitor leo a diam. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna. Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Enim diam vulputate ut pharetra sit amet aliquam. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Venenatis cras sed felis eget velit.</p>
