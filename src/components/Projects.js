@@ -1,58 +1,37 @@
 import React from 'react'
+import { ProjectItem } from '../components'
 
 const Projects = () => {
+  const projects = [ 
+    { title: 'myPortfolio',
+      image: './images/placeholder.jpg',
+      desc: `Personal portfolio site. Built with React frontend.`,
+      tech: ['HTML', 'CSS', 'Javascript', 'Node', 'React', 'react-spring'],
+      gitHubLink: 'https://github.com/AnnMLin/portfolio',
+      link: ''
+    },
+    { title: 'Build-A-Mate',
+      image: './images/placeholder.jpg',
+      desc: `An online dating application that is here not only to revolutionize online dating but also make it fun. Using machine learning libraries and our interactive drag and drop interface, we help a user find their perfect match by letting them build their ideal face.`,
+      tech: ['HTML', 'CSS', 'Javascript', 'Node', 'React', 'Redux', 'Express', 'Sequelize', 'React DnD', 'Face-api.js', 'MaterialUI'],
+      gitHubLink: 'https://github.com/fsa-capstone-team/build-a-mate'
+    },
+    { title: 'Present and Absent of the Body',
+      image: './images/placeholder.jpg',
+      desc: `A robot with bio-mimic components that imitates the human head movement. With research in human neck movement, I designed a robotic neck using the technology of 3d print, laser cut, CNC, IMU sensors and stepper motors. The robot is capable to sense a user's head movements, synchronously follow, capture visions and project back to user's eye goggles.`,
+      tech: ['Processing', 'National Instrument', 'Rhinoceros', 'AutoCAD', 'Arduino', 'IMU 6DOF', 'Laser Cut', 'CNC', '3d Print'],
+      youtube: 'https://www.youtube.com/watch?v=pl25EXSgB4E'
+    }
+  ]
+
   return(
     <div className='content-container'>
       <div className='content'>
-        <div className='project-item'>
-          <div className='cover-photo-item'>
-            <img className='cover-photo' src='./images/placeholder.jpg' alt='Build-A-Mate project'/>
+        {projects.map(item => (
+          <div key={item.title}>
+            <ProjectItem {...item} />
           </div>
-          <div className='text-field'>
-            {/* <div className='title'>Build-A-Mate</div> */}
-            <div className='desc'>
-            An online dating application that is here not only to revolutionize online dating but also make it fun. It allows a user to sign up, take a selfie and design an ideal type of appearance they are looking for. Once completed, the user will be able to browse through profiles that match the user's designed type. Using machine learning libraries and our interactive drag and drop interface, we help a user find their perfect match by letting them build their ideal face. 
-            </div>
-            <div className='tech'>
-              <div className='tech-item'>
-                <div className='tech-keyword'>HTML</div>
-              </div>
-              <div className='tech-item'>
-                <div className='tech-keyword'>CSS</div>
-              </div>
-              <div className='tech-item'>
-                <div className='tech-keyword'>Javascript</div>
-              </div>
-              <div className='tech-item'>
-                <div className='tech-keyword'>Node.js</div>
-              </div>
-              <div className='tech-item'>
-                <div className='tech-keyword'>React</div>
-              </div>
-              <div className='tech-item'>
-                <div className='tech-keyword'>Redux</div>
-              </div>
-              <div className='tech-item'>
-                <div className='tech-keyword'>Express</div>
-              </div>
-              <div className='tech-item'>
-                <div className='tech-keyword'>Sequelize</div>
-              </div>
-              <div className='tech-item'>
-                <div className='tech-keyword'>React DnD</div>
-              </div>
-              <div className='tech-item'>
-                <div className='tech-keyword'>MaterialUI</div>
-              </div>
-              <div className='tech-item'>
-                <div className='tech-keyword'>Face-api.js</div>
-              </div>
-            </div>
-            <div className='link'> 
-              <img className='quick-link-icon' src="./icons/github-5.png" alt='link to Github'/>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div> 
   )
