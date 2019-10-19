@@ -11,7 +11,10 @@
 }
 
 body {
-  background-color: #3FEEE6;
+  background-image: url('/images/background.png');
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-color: white; */
   margin: 0px;
   font-family: 'Questrial', sans-serif;
 }
@@ -24,6 +27,78 @@ a {
   color: inherit;
   text-decoration: inherit;
   display: block;
+}
+
+.aquarium {
+  /* position: fixed; */
+  /* height: 100%; */
+  /* width: 100%; */
+  /* z-index: -1; */
+}
+
+.aquarium > * img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.j1-item {
+  position: fixed;
+  border: solid;
+  top: 10vh;
+  left: 4vw;
+  width: 23vw;
+  height: 23vw;
+  z-index: -1;
+}
+
+.j2-item {
+  position: fixed;
+  border: solid;
+  top: 50vh;
+  left: 50vw;
+  width: 30vw;
+  height: 30vw;
+  z-index: 1;
+}
+
+#j2-trans {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#j2-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6
+  /* z-index: 0; */
+}
+
+.j3-item {
+  position: fixed;
+  border: solid;
+  top: 5vh;
+  right: 0;
+  width: 37vw;
+  height: 30vw;
+  z-index: 1;
+}
+
+#j3-trans {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#j3-fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.3
+  /* z-index: 0; */
 }
 
 #app-container {
