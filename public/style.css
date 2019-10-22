@@ -44,25 +44,37 @@ a {
 .j1-item {
   position: fixed;
   border: solid;
-  top: 10vh;
+  top: 5.5vw;
   left: 4vw;
   width: 23vw;
-  height: 23vw;
+  height: auto;
   z-index: -1;
+  animation: jelly1float 6.9s ease-in-out 0.39s infinite alternate;
+}
+
+@keyframes jelly1float {
+  from{top: 5.5vw; left: 5.4vw;}
+  to{top: 6.3vw; left: 3.3vw;}
 }
 
 .j2-item {
   position: fixed;
   border: solid;
-  top: 50vh;
+  top: 25vw;
   left: 50vw;
   width: 30vw;
-  height: 30vw;
+  height: auto;
   z-index: 1;
+  animation: jelly2float 2s ease-in-out infinite alternate;
+}
+
+@keyframes jelly2float {
+  from{top: 25vw; left: 50vw;}
+  to{top: 28vw; left: 51vw;}
 }
 
 #j2-trans {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   z-index: 1;
@@ -72,18 +84,24 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.6
+  opacity: 0.39
   /* z-index: 0; */
 }
 
 .j3-item {
   position: fixed;
   border: solid;
-  top: 5vh;
+  top: 2.7vw;
   right: 0;
   width: 37vw;
   height: 30vw;
   z-index: 1;
+  animation: jelly3float 2.9s ease-in-out 0.5s infinite alternate-reverse;
+}
+
+@keyframes jelly3float {
+  from{top: 2.4vw;}
+  to{top: 3.1vw;}
 }
 
 #j3-trans {
@@ -97,7 +115,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  opacity: 0.3
+  opacity: 0.19
   /* z-index: 0; */
 }
 
@@ -133,8 +151,11 @@ a {
 }
 
 .big-letters-link:hover {
-  color: #EA5EF2;
+  position: relative;
+  color: white;
   cursor: pointer;
+  z-index: 10;
+  /* animation: hover 2s; */
 }
 
 .big-letters-link::before {
