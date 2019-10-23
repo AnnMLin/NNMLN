@@ -39,17 +39,18 @@ a {
 .aquarium > * img {
   max-width: 100%;
   max-height: 100%;
+  /* filter: grayscale(50%) */
 }
 
 .j1-item {
   position: fixed;
-  border: solid;
+  /* border: solid; */
   top: 5.5vw;
   left: 4vw;
   width: 23vw;
   height: auto;
   z-index: -1;
-  animation: jelly1float 6.9s ease-in-out 0.39s infinite alternate;
+  animation: jelly1float 5s ease-in-out 0.39s infinite alternate;
 }
 
 @keyframes jelly1float {
@@ -59,7 +60,7 @@ a {
 
 .j2-item {
   position: fixed;
-  border: solid;
+  /* border: solid; */
   top: 25vw;
   left: 50vw;
   width: 30vw;
@@ -90,7 +91,7 @@ a {
 
 .j3-item {
   position: fixed;
-  border: solid;
+  /* border: solid; */
   top: 2.7vw;
   right: 0;
   width: 37vw;
@@ -168,6 +169,11 @@ a {
   margin: -0.095em;
 }
 
+.isOpen {
+  position: relative;
+  z-index: 10;
+}
+
 .animated-div {
   overflow: hidden;
   font-size: 20px;
@@ -186,6 +192,7 @@ a {
   /* background: #557580; */
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
 
 .project-item {
