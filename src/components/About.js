@@ -4,17 +4,17 @@ const About = () => {
   const image = '/images/placeholder.jpg'
   return(
     <div className='content'>
-      <div>
-        <div className='cover-photo-item'>
-          <img className='cover-photo' src={image} alt=''/>
+      <div className='about-item'>
+        <div className='headshot-item'>
+          <img className='headshot' src={image} alt=''/>
         </div>
-        <p>Hi! I'm Ann, a full-stack software developer based in New York.</p>
-
-        <p>My coding journey started when I was studying</p>
-
-        <p>I have a background in Architecture. Because of the nature of the industry I travel a lot. I've lived in I like to make line drawings when I travel.</p>
-
-        <p>I have another background in dance. When I'm not coding I dance and vice versa. I am a licensed instructor and a active competitor. I teach, perform and compete in the US and internationally.</p>
+        <div className='info-field'>
+          <p>Hi! I'm Ann</p>
+          <p>Full-stack software engineer with backgrounds in architectural design, parametric design, and dance.</p>
+          <p>New York City via Munich, London, Taiwan, and Oklahoma.</p>
+          <p>I work at the intersection of science, technology, and design. Experimental with lots of interests. Always looking for inspirations.</p>
+          <p>Outside of coding, I make line drawings, teach adult dance classes, perform, and was named finalists in multiple dance competitions in the US and internationally. I've built a single family housing prototype with my team in Colombia, South America, was part of an exhibition at the Swiss Pavilion at Venice Biennale 2014, and performed at Pole Theatre Iceland.</p>
+        </div>
       </div>
     </div> 
   )
