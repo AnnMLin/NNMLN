@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
+import axios from 'axios'
+const GOOGLE_FORM_MESSAGE_ID = 'entry.1705909865'
+const GOOGLE_FORM_NAME_ID = 'entry.406913298'
+const GOOGLE_FORM_EMAIL_ID = 'emailAddress'
+const GOOGLE_FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScDu8IFy-KyNcvrNyMgWDgFZnMCpEzV2AjGdexEISqvCcSCsg/formResponse'
+const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
 
 const ContactForm = () => {
-
-  // const [name, setName] = useState('')
-  // const [email, setEmail] = useState('')
-  // const [msg, setMsg] = useState('')
 
   const [state, setState] = useState({name: '', email: '', msg: ''})
 
@@ -20,6 +22,19 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault()
     console.log('Submit!')
+    const formData = new FormData()
+    formData.append(GOOGLE_FORM_MESSAGE_ID, state.msg)
+    formData.append(GOOGLE_FORM_EMAIL_ID, state.email)
+    formData.append(GOOGLE_FORM_NAME_ID, state.name)
+    axios
+      .post(CORS_PROXY + GOOGLE_FORM_ACTION_URL, formData)
+      .then(() => {
+        console.log('SUCCESS!')
+        setState({name: '', email: '', msg: ''})
+      })
+      .catch((error)=>{
+        console.log(error)
+      })
   }
 
   return(
@@ -36,7 +51,7 @@ const ContactForm = () => {
       </div>
       <div id='msg'>
         <div>Message:</div>
-        <textarea type='text' name='message' value={state.msg} onChange={handleChange}/>
+        <textarea type='text' name='msg' value={state.msg} onChange={handleChange}/>
       </div>
       <div className='btn-container'>
         <div className='btn-item'>
