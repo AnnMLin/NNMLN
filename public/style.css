@@ -30,13 +30,7 @@ a {
   display: block;
 }
 
-.aquarium {
-  /* position: fixed; */
-  /* height: 100%; */
-  /* width: 100%; */
-  /* z-index: -1; */
-}
-
+/*--------------JELLYFISH--------------*/
 .aquarium > * img {
   max-width: 100%;
   max-height: 100%;
@@ -80,7 +74,7 @@ a {
   /* position: absolute; */
   top: 0;
   left: 0;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 #j2-fill {
@@ -124,6 +118,7 @@ a {
   /* z-index: 0; */
 }
 
+/*--------------APP--------------*/
 #app-container {
   /* height: 100vh;
   width: 100%; */
@@ -142,6 +137,7 @@ a {
   justify-content: center;
 }
 
+/*--------------TOGGLES--------------*/
 .big-letters {
   padding: 0.2em 0;
   margin: 0 0;
@@ -185,27 +181,28 @@ a {
   z-index: 10;
 }
 
-.content-container {
+/* .content-container {
   background:white;
   width: 100%;
   display: flex;
   justify-content: center;
-  /* padding: 5em 1em; */
-}
+} */
 
 .content {
   padding: 5em 1em 0 1em;
-  /* background: #557580; */
+  /* background: red; */
   display: flex;
   flex-direction: column;
 }
 
+/*--------------PROJECTS--------------*/
 .project-item {
-  /* background: #D0B48D; */
+  background: rgb(255,255,255,.5);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 3em;
+  border-radius: .3em;
 }
 
 .cover-photo-item {
@@ -269,6 +266,7 @@ a {
   width: 32px;
 }
 
+/*--------------ABOUT--------------*/
 .about-item {
   /* background: #D0B48D; */
   display: flex;
@@ -300,10 +298,97 @@ a {
   /* padding:1vw */
 }
 
-#home {
-  font-size: 2.3em;
+/*--------------CONTACT--------------*/
+.contact-item {
+  /* background: rgb(255,255,255,.5); */
+  margin-bottom: 3em;
+  border-radius: .4em;
+  /* padding: var(--content-padding); */
 }
 
+.space {
+  height: 1em;
+}
+
+.text {
+  padding: var(--content-padding);
+}
+
+/*--------------CONTACT FORM--------------*/
+.form-item {
+  background: rgb(255,255,255,.5);
+  width: 70vw;
+  padding: var(--content-padding);
+  border-radius: .3em;
+}
+
+#info-container {
+  /* background: blue; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  padding-bottom: var(--content-padding);
+}
+
+#name {
+  /* box-sizing: content-box; */
+  width: 50%;
+  padding-right: 2em;
+}
+
+#email {
+  width: 50%;
+}
+
+#name > div, #email > div, #msg > div {
+  padding-bottom: var(--content-padding);
+  /* display: flex; */
+  /* align-content: center; */
+}
+
+#msg {
+  padding-bottom: var(--content-padding);
+}
+
+input {
+  height: 1.5em;
+  width: 30vw;
+  max-width: 20em;
+  border: none;
+}
+
+textarea {
+  border: none;
+  width: 100%;
+  height: 15em;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-container {
+  /* width: 60%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.btn {
+  background: white;
+  /* font-size: inherit;
+  font-family: inherit; */
+  height: 1.5em;
+  width: 10em;
+  /* text-align: center;
+  margin: auto;
+  vertical-align: middle; */
+  /* border: none; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--content-padding);
+}
+
+/*--------------QUICK LINKS--------------*/
 #side-bar {
   position: fixed;
   /* background-color: #9F353A; */
@@ -328,14 +413,4 @@ a {
 
 .quick-link-icon {
   width: 50%;
-}
-
-#main {
-  /* position: absolute; */
-  height: calc(100vh - var(--nav-bar-height) - 3vw);
-  width: calc(100vw - var(--side-bar-width));
-  margin: var(--nav-bar-height) var(--side-bar-width) 0 var(--side-bar-width);
-  /* margin-top: var(--nav-bar-height); */
-  padding: 3vw 5vw 0 5vw;
-  font-size: 17px;
 }
