@@ -37,6 +37,10 @@ const ContactForm = () => {
       })
   }
 
+  const showModal = () => {
+    
+  }
+
   return(
     <form className='form-item' onSubmit={handleSubmit}>
       <div id='info-container'>
@@ -53,6 +57,7 @@ const ContactForm = () => {
         <div>Message:</div>
         <textarea type='text' name='msg' value={state.msg} onChange={handleChange}/>
       </div>
+      <div id='warning'>*Information required</div>
       <div className='btn-container'>
         <div className='btn-item'>
           <div className='btn' type='clear' onClick={handleClear}>Clear</div>

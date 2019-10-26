@@ -336,6 +336,11 @@ a {
   padding-right: 2em;
 }
 
+#name > div::after, #email > div::after, #msg > div::after {
+  content: '*';
+  color: red;
+}
+
 #email {
   width: 50%;
 }
@@ -346,8 +351,10 @@ a {
   /* align-content: center; */
 }
 
-#msg {
+#warning {
   padding-bottom: var(--content-padding);
+  color: red;
+  font-size: .8em;
 }
 
 input {
@@ -406,6 +413,7 @@ textarea::-webkit-scrollbar {
 
 .btn:hover {
   border: solid 1px;
+  cursor: pointer;
 }
 
 /*--------------QUICK LINKS--------------*/
