@@ -9,10 +9,17 @@ const ContactForm = () => {
   const [state, setState] = useState({name: '', email: '', msg: ''})
 
   const handleChange = e => {
+    setState({...state, [e.target.name]: e.target.value})
+    // console.log(state)
+  }
+
+  const handleClear = () => {
+    setState({name: '', email: '', msg: ''})
   }
 
   const handleSubmit = e => {
     e.preventDefault()
+    console.log('Submit!')
   }
 
   return(
@@ -33,12 +40,11 @@ const ContactForm = () => {
       </div>
       <div className='btn-container'>
         <div className='btn-item'>
-          <div className='btn' type='clear'>Clear</div>
+          <div className='btn' type='clear' onClick={handleClear}>Clear</div>
         </div>
         <div className='btn-item'>
-          <div className='btn' type='submit'>Submit</div>
+          <div className='btn' type='submit' onClick={handleSubmit}>Submit</div>
         </div>
-        {/* <input className='button' type="submit" value="Send"/> */}
       </div>
     </form>
   )

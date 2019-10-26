@@ -386,6 +386,11 @@ textarea {
   justify-content: center;
   align-items: center;
   margin-right: var(--content-padding);
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  border: solid 1px;
 }
 
 /*--------------QUICK LINKS--------------*/
