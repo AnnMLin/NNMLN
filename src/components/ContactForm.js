@@ -8,11 +8,10 @@ const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
 
 const ContactForm = () => {
 
-  const [state, setState] = useState({name: '', email: '', msg: ''})
+  const [state, setState] = useState({name: '', email: '', msg: '', warning:''})
 
   const handleChange = e => {
     setState({...state, [e.target.name]: e.target.value})
-    // console.log(state)
   }
 
   const handleClear = () => {
@@ -21,7 +20,24 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log('Submit!')
+    if(state.name&&state.msg) {
+      if(validateEmail()) {
+        console.log('Submit!')
+        sendMsg()
+      }
+    }
+    else if(!state.name) {
+      setState({...state, warning: 'Name'})
+    }
+    else {
+      setState({...state, warning: 'Message'})
+    }
+  }
+
+  const validateEmail = (str) => {
+  }
+
+  const sendMsg = () => {
     const formData = new FormData()
     formData.append(GOOGLE_FORM_MESSAGE_ID, state.msg)
     formData.append(GOOGLE_FORM_EMAIL_ID, state.email)
@@ -35,10 +51,6 @@ const ContactForm = () => {
       .catch((error)=>{
         console.log(error)
       })
-  }
-
-  const showModal = () => {
-    
   }
 
   return(
@@ -57,7 +69,7 @@ const ContactForm = () => {
         <div>Message:</div>
         <textarea type='text' name='msg' value={state.msg} onChange={handleChange}/>
       </div>
-      <div id='warning'>*Information required</div>
+      {/* <div id='warning'>*Required field</div> */}
       <div className='btn-container'>
         <div className='btn-item'>
           <div className='btn' type='clear' onClick={handleClear}>Clear</div>
@@ -65,6 +77,10 @@ const ContactForm = () => {
         <div className='btn-item'>
           <div className='btn' type='submit' onClick={handleSubmit}>Submit</div>
         </div>
+        {state.warning ? 
+        <div className='warning'>{`${state.warning} is required`}</div>
+        : null
+        }
       </div>
     </form>
   )

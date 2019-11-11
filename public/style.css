@@ -351,8 +351,11 @@ a {
   /* align-content: center; */
 }
 
-#warning {
+#msg {
   padding-bottom: var(--content-padding);
+}
+
+#warning {
   color: red;
   font-size: .8em;
 }
