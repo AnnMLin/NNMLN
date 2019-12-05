@@ -20,22 +20,35 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    if(state.name&&state.msg) {
-      if(validateEmail()) {
-        console.log('Submit!')
-        sendMsg()
-      }
+    if(!state.name) {
+      setState({...state, warning: 'Name is required *'})
+      return
     }
-    else if(!state.name) {
-      setState({...state, warning: 'Name'})
+    if(!state.msg) {
+      setState({...state, warning: 'Message is required *'})
+      return
     }
-    else {
-      setState({...state, warning: 'Message'})
+    if(!state.email) {
+      setState({...state, warning: 'Email is required *'})
+      return
     }
+    if(!validateEmail(state.email)) {
+      setState({...state, warning: 'Please enter a valid email *'})
+      return
+    }
+    console.log('Submit!')
+    sendMsg()
   }
 
-  const validateEmail = (str) => {
+  const validateEmail = email => {
+    // eslint-disable-next-line
+    const expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i
+    // sourced from: https://flaviocopes.com/how-to-validate-email-address-javascript/
+    return expression.test(String(email).toLowerCase())
   }
+
+  // const validateEmail = (str) => {
+  // }
 
   const sendMsg = () => {
     const formData = new FormData()
@@ -78,7 +91,7 @@ const ContactForm = () => {
           <div className='btn' type='submit' onClick={handleSubmit}>Submit</div>
         </div>
         {state.warning ? 
-        <div className='warning'>{`${state.warning} is required`}</div>
+        <div className='warning'>{state.warning}</div>
         : null
         }
       </div>

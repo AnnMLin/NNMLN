@@ -355,9 +355,11 @@ a {
   padding-bottom: var(--content-padding);
 }
 
-#warning {
+.warning {
   color: red;
   font-size: .8em;
+  display: flex;
+  align-self: center;
 }
 
 input {
