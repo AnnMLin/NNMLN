@@ -15,23 +15,23 @@ const ContactForm = () => {
   }
 
   const handleClear = () => {
-    setState({name: '', email: '', msg: ''})
+    setState({name: '', email: '', msg: '', warning:''})
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    if(!state.name) {
-      setState({...state, warning: 'Name is required *'})
+    if(!state.name || !state.msg || !state.email) {
+      setState({...state, warning: 'All fields required *'})
       return
     }
-    if(!state.msg) {
-      setState({...state, warning: 'Message is required *'})
-      return
-    }
-    if(!state.email) {
-      setState({...state, warning: 'Email is required *'})
-      return
-    }
+    // if(!state.msg) {
+    //   setState({...state, warning: 'All fields required *'})
+    //   return
+    // }
+    // if(!state.email) {
+    //   setState({...state, warning: 'All fields required *'})
+    //   return
+    // }
     if(!validateEmail(state.email)) {
       setState({...state, warning: 'Please enter a valid email *'})
       return
