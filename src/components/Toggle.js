@@ -3,7 +3,7 @@ import {useMeasure} from '../helpers.js'
 import {useSpring, animated} from 'react-spring'
 import classNames from 'classnames'
 
-const Toggle = memo(({ children, name, isOpen = false, handleClick }) => {
+const Toggle = memo(({ children, name, isOpen/* = false*/, handleClick }) => {
   
   const [bind, { height: viewHeight}] = useMeasure()
   
@@ -15,9 +15,16 @@ const Toggle = memo(({ children, name, isOpen = false, handleClick }) => {
 
   return (
     <div id={`${name}`} className='big-letters'>
-      <div className={classNames('big-letters-link', {isOpen})} onClick={(e) => handleClick(e, name)} title={name}>{name}</div>
+      <div className={classNames('big-letters-link', {isOpen})}>
+        <div className='big-letters-container'>
+          <span className='big-letters-inner-text' onClick={(e) => handleClick(e, name)} title={name}>{name}</span>
+        </div>
+      </div>
       <animated.div className='animated-div' style={{ opacity, height }}>
-        <div {...bind} children={children} />
+        {/* <div {...bind} children={children} /> */}
+        <div {...bind}>
+          {children}
+        </div>
       </animated.div>
     </div>
   )

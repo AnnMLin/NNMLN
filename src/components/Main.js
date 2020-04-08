@@ -1,3 +1,4 @@
+// NOT IN USE
 import React from 'react'
 import { Navbar, Projects, About, Contact } from '../components'
 import { Switch, Route } from 'react-router-dom'

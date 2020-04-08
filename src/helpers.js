@@ -8,7 +8,7 @@ export function useMeasure() {
   const [ro] = useState(() => new ResizeObserver(([entry]) => set(entry.contentRect)))
   useEffect(() => {
     if (ref.current) ro.observe(ref.current)
-    return () => ro.disconnect()
+    return () => ro.disconnect() //HOW THIS WORKS?
   }, [])
   return [{ ref }, bounds]
   // After initial render, ref will be bound to current div using {...bind}, ref.current will now be set to current div

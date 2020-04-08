@@ -11,10 +11,10 @@
 }
 
 body {
-  background-image: url('/images/background.png');
-  background-attachment: fixed;
-  background-size: cover;
-  /* background-color: white; */
+  /* background-image: url('/images/background.png'); */
+  /* background-attachment: fixed; */
+  /* background-size: cover; */
+  background-color: rgb(158, 196, 231);
   margin: 0px;
   font-family: 'Questrial', sans-serif;
   /* filter: grayscale(50%) */
@@ -151,14 +151,6 @@ a {
   overflow: hidden;
 }
 
-.big-letters-link:hover {
-  position: relative;
-  color: white;
-  cursor: pointer;
-  z-index: 10;
-  /* animation: hover 2s; */
-}
-
 .big-letters-link::before {
   content: '';
   margin: -0.075em;
@@ -167,6 +159,25 @@ a {
 .big-letters-link::after {
   content: '';
   margin: -0.095em;
+}
+
+.big-letters-container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.big-letters-container::after {
+  flex-grow: 100;
+  content: '';
+}
+
+.big-letters-inner-text:hover {
+  position: relative;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  /* animation: hover 2s; */
 }
 
 .isOpen {
