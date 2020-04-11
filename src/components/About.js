@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   const image = '/images/placeholder.jpg'
   return(
-    <div className='content'>
+    <div className='content-container'>
       <div className='about-item'>
         <div className='headshot-item'>
           <img className='headshot' src={image} alt=''/>

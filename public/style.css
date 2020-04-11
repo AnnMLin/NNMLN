@@ -4,10 +4,18 @@
 #0D5661 #9F353A #D7B98E #4F726C
 */
 
+/*
+STYLING NOTES
+- side bar width is 4vw
+- home page width is vw minus side bar
+- big letters no setting
+- content container only paddings
+*/
+
 :root {
   --side-bar-width: 4vw;
-  --nav-bar-height: 5.8vw;
   --content-padding: 1vw;
+  --home-page-width: calc(100vw - var(--side-bar-width));
 }
 
 body {
@@ -128,7 +136,7 @@ a {
 
 #home-page {
   height: 100vh;
-  width: calc(100vw - var(--side-bar-width));
+  width: var(--home-page-width);
   margin-left: var(--side-bar-width);
   padding: 0 5vw;
   font-size: 16.9vw;
@@ -192,14 +200,7 @@ a {
   z-index: 10;
 }
 
-/* .content-container {
-  background:white;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-} */
-
-.content {
+.content-container {
   padding: 5em 1em 0 1em;
   /* background: red; */
   display: flex;
@@ -207,47 +208,52 @@ a {
 }
 
 /*--------------PROJECTS--------------*/
-.project-item {
-  background: rgb(255,255,255,.5);
+.projects-container {
+  /* border: 1px solid red; */
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: flex-start;
-  margin-bottom: 3em;
-  border-radius: .3em;
+  align-content: flex-start;
+}
+
+.project-card {
+  background: rgb(255,255,255,.5);
+  width: 450px;
+  margin: 30px;
 }
 
 .cover-photo-item {
-  /* background: #4F726C; */
-  width: 40vw;
-  /* max-width: 700px; */
+  /* border: thin solid red; */
+  width: inherit;
+  height: 200px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }  
 
 .cover-photo {
-  /* width: 40vw;
-  box-sizing: border-box; */
-  width: calc(100% - 2*var(--content-padding));
-  padding: var(--content-padding);
+  width: 200px;
 }
 
 .text-field {
-  /* background: #9F353A; */
-  width: calc(100% - 40vw - 5em);
-  margin-left: 5em;
-  /* padding:1vw */
+  /* border: thin solid red; */
+  display: flex;
+  flex-direction: column;
 }
 
 .desc {
+  height: 180px;
   padding: var(--content-padding);
 }
 
 .tech {
+  height: 100px;
   padding: var(--content-padding);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -263,6 +269,7 @@ a {
 }
 
 .link {
+  height: 35px;
   padding: var(--content-padding);
   display: flex;
   flex-direction: row;
@@ -275,6 +282,11 @@ a {
 
 .link-icon {
   width: 32px;
+}
+
+.auto-fill {
+  width: 450px;
+  margin: 30px;
 }
 
 /*--------------ABOUT--------------*/

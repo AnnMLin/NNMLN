@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProjectItem = ({ title, image, desc, tech = [], gitHubLink, link, youtube }) => {
   return (
-    <div className='project-item'>
+    <div className='project-card'>
       <div className='cover-photo-item'>
         <img className='cover-photo' src={image} alt={title}/>
       </div>
