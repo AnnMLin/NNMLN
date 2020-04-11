@@ -3,7 +3,7 @@ import {ContactForm} from '../components'
 
 const Contact = () => {
   return(
-    <div className='content'>
+    <div className='content-container'>
       <div className='contact-item'>
         <div className='text'>Leave me a message!</div>
         <div className='space'></div>

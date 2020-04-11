@@ -6,7 +6,7 @@ const App = () => {
     <div id='app-container'>
       <Sidebar />
       <Home />
-      <Jellyfish />
+      {/* <Jellyfish /> */}
     </div>
   )
 }
