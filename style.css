@@ -196,7 +196,7 @@ a {
 .animated-div {
   position: relative;
   overflow: hidden;
-  font-size: 20px;
+  font-size: 15px;
   z-index: 10;
 }
 
@@ -220,8 +220,8 @@ a {
 
 .project-card {
   background: rgb(255,255,255,.5);
-  width: 450px;
-  margin: 30px;
+  width: 300px;
+  margin: 20px;
 }
 
 .cover-photo-item {
@@ -257,9 +257,9 @@ a {
   flex-wrap: wrap;
 }
 
-.tech-item {
-  font-size: 16px;
-}
+/* .tech-item {
+  font-size: 15px;
+} */
 
 .tech-keyword {
   margin: 0.1em;
@@ -476,5 +476,4 @@ textarea::-webkit-scrollbar {
 .quick-link-icon {
   width: 50%;
   height: 100%;
-  display: block;
 }
