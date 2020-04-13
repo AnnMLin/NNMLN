@@ -11,7 +11,7 @@ const Sidebar = () => {
           <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/linkedin.png"} alt='link to Linkedin'/>
         </a>
         <a className='quick-link' href='' target='_blank'>
-          <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/linkedin.png"} alt='link to Resume'/>
+          <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/download.png"} alt='link to Resume'/>
         </a>
         <a className='quick-link' href='mailto:hello@annmlin.com'>
           <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/email.png"} alt='link to Email'/>
