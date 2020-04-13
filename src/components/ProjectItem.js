@@ -20,19 +20,19 @@ const ProjectItem = ({ title, image, desc, tech = [], gitHubLink, link, youtube 
           {gitHubLink ? 
           <div className='link-item'>
             <a target='_blank' href={gitHubLink}>
-              <img className='link-icon' src="./icons/github-5.png" alt='link to Github'/>
+              <img className='link-icon' src={process.env.PUBLIC_URL + "/icons/github.png"} alt='link to Github'/>
             </a>
           </div> : null }
           {youtube ?
           <div className='link-item'>
             <a target='_blank' href={youtube}>
-              <img className='link-icon' src="./icons/youtube-icon.png" alt='link to Youtube'/>
+              <img className='link-icon' src={process.env.PUBLIC_URL + "/icons/youtube-icon.png"} alt='link to Youtube'/>
             </a>
           </div> : null }
           {link ?
           <div className='link-item'>
             <a target='_blank' href={link}>
-              <img className='link-icon' src="./icons/web-5.png" alt='link to Website'/>
+              <img className='link-icon' src={process.env.PUBLIC_URL + "/icons/web-5.png"} alt='link to Website'/>
             </a>
           </div> : null }
         </div>
