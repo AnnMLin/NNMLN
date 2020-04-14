@@ -281,8 +281,9 @@ a {
 }
 
 .link-icon {
-  /* display: initial; */
-  width: 32px;
+  width: 2vw;
+  min-width: 25px;
+  max-width: 30px;
 }
 
 .auto-fill {
@@ -475,7 +476,8 @@ textarea::-webkit-scrollbar {
 }
 
 .quick-link-icon {
-  /* display: initial; */
   width: 50%;
   height: 100%;
+  max-width: 30px;
+  min-width: 25px;
 }
