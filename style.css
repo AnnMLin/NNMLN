@@ -453,6 +453,8 @@ textarea::-webkit-scrollbar {
   color: white;
   height: 100vh;
   width: var(--side-bar-width);
+  min-width: 50px;
+  max-width: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -478,6 +480,4 @@ textarea::-webkit-scrollbar {
 .quick-link-icon {
   width: 50%;
   height: 100%;
-  max-width: 30px;
-  min-width: 25px;
 }
