@@ -281,6 +281,7 @@ a {
 }
 
 .link-icon {
+  display: initial;
   width: 32px;
 }
 
@@ -474,6 +475,7 @@ textarea::-webkit-scrollbar {
 }
 
 .quick-link-icon {
+  display: initial;
   width: 50%;
   height: 100%;
 }
