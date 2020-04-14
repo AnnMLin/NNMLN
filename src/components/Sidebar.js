@@ -8,7 +8,7 @@ const Sidebar = () => {
           <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/github.png"} alt='link to Github'/>
         </a>
         <a className='quick-link' href='https://www.linkedin.com/in/ann-m-lin' target='_blank'>
-          <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/linkedin.png"} alt='link to Linkedin'/>
+          <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/profile.png"} alt='link to Linkedin'/>
         </a>
         <a className='quick-link' href='' target='_blank'>
           <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/download.png"} alt='link to Resume'/>
