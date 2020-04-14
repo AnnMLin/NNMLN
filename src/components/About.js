@@ -1,7 +1,7 @@
 import React from 'react'
 
 const About = () => {
-  const image = '/images/placeholder.jpg'
+  const image = process.env.PUBLIC_URL +  '/images/circle-place-holder.png'
   return(
     <div className='content-container'>
       <div className='about-item'>

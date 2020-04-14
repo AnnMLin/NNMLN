@@ -32,7 +32,7 @@ const ProjectItem = ({ title, image, desc, tech = [], gitHubLink, link, youtube 
           {link ?
           <div className='link-item'>
             <a target='_blank' href={link}>
-              <img className='link-icon' src={process.env.PUBLIC_URL + "/icons/web-5.png"} alt='link to Website'/>
+              <img className='link-icon' src={process.env.PUBLIC_URL + "/icons/home.png"} alt='link to Website'/>
             </a>
           </div> : null }
         </div>
