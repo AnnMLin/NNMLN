@@ -5,7 +5,7 @@ const Sidebar = () => {
     <div id='side-bar'>
       <div id='side-bar-content'>
         <a className='quick-link' href='https://github.com/AnnMLin' target='_blank'>
-          <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/github.png"} alt='link to Github'/>
+          <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/github-hollow.png"} alt='link to Github'/>
         </a>
         <a className='quick-link' href='https://www.linkedin.com/in/ann-m-lin' target='_blank'>
           <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/profile.png"} alt='link to Linkedin'/>

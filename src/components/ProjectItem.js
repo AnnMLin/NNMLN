@@ -20,7 +20,7 @@ const ProjectItem = ({ title, image, desc, tech = [], gitHubLink, link, youtube 
           {gitHubLink ? 
           <div className='link-item'>
             <a target='_blank' href={gitHubLink}>
-              <img className='link-icon' src={process.env.PUBLIC_URL + "/icons/github.png"} alt='link to Github'/>
+              <img className='link-icon' src={process.env.PUBLIC_URL + "/icons/github-hollow.png"} alt='link to Github'/>
             </a>
           </div> : null }
           {youtube ?
