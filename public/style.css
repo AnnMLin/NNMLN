@@ -226,8 +226,9 @@ a {
 
 .cover-photo-item {
   /* border: thin solid red; */
-  width: inherit;
+  /* width: inherit; */
   height: 200px;
+  padding: var(--content-padding);
   display: flex;
   justify-content: center;
 }  
@@ -273,6 +274,7 @@ a {
   padding: var(--content-padding);
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .link-item {
