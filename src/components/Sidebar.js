@@ -10,7 +10,7 @@ const Sidebar = () => {
         <a className='quick-link' href='https://www.linkedin.com/in/ann-m-lin' target='_blank'>
           <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/profile.png"} alt='link to Linkedin'/>
         </a>
-        <a className='quick-link' href='' target='_blank'>
+        <a className='quick-link' href={process.env.PUBLIC_URL + "/docs/AnnLinResume.pdf"} target='_blank'>
           <img className='quick-link-icon' src={process.env.PUBLIC_URL + "/icons/download.png"} alt='link to Resume'/>
         </a>
         <a className='quick-link' href='mailto:hello@annmlin.com'>
