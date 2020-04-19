@@ -13,15 +13,23 @@ STYLING NOTES
 */
 
 :root {
-  --side-bar-width: 4vw;
-  --content-padding: 1vw;
+  /* --side-bar-width: 4vw; */
+  --side-bar-width: 50px;
+  --content-padding: 13px;
+  /* --content-padding: 1vw; */
   --home-page-width: calc(100vw - var(--side-bar-width));
+  /* --home-page-padding: max(5vw, 30px); */
+  --home-page-padding: 30px;
+  --min-view-height: 400px;
+  --min-view-width: calc(400px * 160/89);
 }
 
 body {
   background-color: rgb(158, 196, 231);
   margin: 0px;
   font-family: 'Questrial', sans-serif;
+  /* min-height: 225px; */
+  /* min-width: 200vh; */
 }
 
 div {
@@ -34,94 +42,6 @@ a {
   display: block;
 }
 
-/*--------------JELLYFISH--------------*/
-.aquarium > * img {
-  max-width: 100%;
-  max-height: 100%;
-  /* filter: grayscale(50%) */
-}
-
-.j1-item {
-  position: fixed;
-  /* border: solid; */
-  top: 5.5vw;
-  left: 4vw;
-  width: 23vw;
-  height: auto;
-  z-index: -1;
-  animation: jelly1float 5s ease-in-out 0.39s infinite alternate;
-}
-
-@keyframes jelly1float {
-  from{top: 5.5vw; left: 5.4vw;}
-  to{top: 6.3vw; left: 3.3vw;}
-}
-
-.j2-item {
-  position: fixed;
-  /* border: solid; */
-  top: 25vw;
-  left: 50vw;
-  width: 30vw;
-  height: auto;
-  z-index: 1;
-  animation: jelly2float 2s ease-in-out infinite alternate;
-  /* opacity: .99; */
-}
-
-@keyframes jelly2float {
-  from{top: 25vw; left: 50vw;}
-  to{top: 28vw; left: 51vw;}
-}
-
-#j2-trans {
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  /* z-index: 1; */
-}
-
-#j2-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.39
-  /* z-index: 0; */
-}
-
-.j3-item {
-  position: fixed;
-  /* border: solid; */
-  top: 2.7vw;
-  right: 0;
-  width: 37vw;
-  height: 30vw;
-  z-index: 1;
-  animation: jelly3float 2.9s ease-in-out 0.5s infinite alternate-reverse;
-  /* opacity: .99; */
-}
-
-@keyframes jelly3float {
-  from{top: 2.4vw;}
-  to{top: 3.1vw;}
-}
-
-#j3-trans {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  /* opacity: .89; */
-}
-
-#j3-fill {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0.19
-  /* z-index: 0; */
-}
-
 /*--------------APP--------------*/
 #app-container {
   display: flex;
@@ -129,14 +49,42 @@ a {
 }
 
 #home-page {
+  /* border: solid 1px red; */
   height: 100vh;
   width: var(--home-page-width);
   margin-left: var(--side-bar-width);
-  padding: 0 5vw;
-  font-size: 16.9vw;
+  padding: 0 var(--home-page-padding);
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+}
+
+/* @media (min-aspect-ratio: 160/89) {
+  #home-page {
+    font-size: max(30.4vh, calc(var(--min-view-height) * 0.304));
+  }
+}
+
+@media (min-aspect-ratio: 3/4) and (max-aspect-ratio: 160/89) {
+  #home-page {
+    font-size: max(16.9vw, calc(var(--min-view-width) * 0.169))
+  }
+} */
+
+@media (max-height: 400px), (max-width: 719.1px) {
+  #home-page {
+    font-size: calc(var(--min-view-height) * 0.304);
+  }
+}
+
+@media (min-height: 400px) and (min-width: 719.1px) and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 160/89) {
+  #home-page {
+    font-size: 16.91vw;
+  }
+}
+
+@media (min-height: 400px) and (min-width: 719.1px) and (min-aspect-ratio: 160/89) {
+  #home-page {
+    font-size: 30.4vh;
+  }
 }
 
 /*--------------TOGGLES--------------*/
@@ -192,14 +140,20 @@ a {
 }
 
 .content-container {
-  padding: 5em 1em 0 1em;
-  display: flex;
-  flex-direction: column;
+  /* border: solid 1px red; */
+  padding: 5em 20px 0 20px;
+  width: 82vw;
+  min-width: calc(var(--min-view-width) * 0.82);
+}
+
+@media (min-aspect-ratio: 160/89) {
+  .content-container {
+    width: 147.4vh;
+  }
 }
 
 /*--------------PROJECTS--------------*/
 .projects-container {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -320,7 +274,7 @@ a {
 /*--------------CONTACT FORM--------------*/
 .form-item {
   background: rgb(255,255,255,.5);
-  width: 70vw;
+  width: 88%;
   padding: var(--content-padding);
   border-radius: .3em;
 }
@@ -362,7 +316,7 @@ a {
 
 input {
   height: 1.5em;
-  width: 30vw;
+  width: 90%;
   max-width: 20em;
   border: none;
   font-size: inherit;
@@ -415,8 +369,9 @@ textarea::-webkit-scrollbar {
 /*--------------QUICK LINKS--------------*/
 #side-bar {
   position: fixed;
-  color: white;
+  /* color: white; */
   height: 100vh;
+  min-height: 300px;
   width: var(--side-bar-width);
   min-width: 50px;
   max-width: 60px;
@@ -427,7 +382,8 @@ textarea::-webkit-scrollbar {
 
 #side-bar-content {
   position: relative;
-  height: 27%;
+  height: 30%;
+  min-height: 225px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -444,4 +400,98 @@ textarea::-webkit-scrollbar {
 .quick-link-icon {
   width: 50%;
   height: 100%;
+}
+
+/*--------------JELLYFISH--------------*/
+.aquarium > * img {
+  max-width: 100%;
+  max-height: 100%;
+  /* filter: grayscale(50%) */
+}
+
+.j1-item {
+  position: fixed;
+  /* border: solid; */
+  top: 5.5vw;
+  left: 4vw;
+  width: 23vw;
+  height: auto;
+  z-index: -1;
+  animation: jelly1float 5s ease-in-out 0.39s infinite alternate;
+}
+
+@keyframes jelly1float {
+  from{top: 5.5vw; left: 5.4vw;}
+  to{top: 6.3vw; left: 3.3vw;}
+}
+
+.j2-item {
+  position: fixed;
+  /* border: solid; */
+  top: 25vw;
+  left: 50vw;
+  width: 30vw;
+  height: auto;
+  z-index: 1;
+  animation: jelly2float 2s ease-in-out infinite alternate;
+  /* opacity: .99; */
+}
+
+@keyframes jelly2float {
+  from{top: 25vw; left: 50vw;}
+  to{top: 28vw; left: 51vw;}
+}
+
+#j2-trans {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  /* z-index: 1; */
+}
+
+#j2-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.39
+  /* z-index: 0; */
+}
+
+.j3-item {
+  position: fixed;
+  /* border: solid; */
+  top: 2.7vw;
+  right: 0;
+  width: 37vw;
+  height: 30vw;
+  z-index: 1;
+  animation: jelly3float 2.9s ease-in-out 0.5s infinite alternate-reverse;
+  /* opacity: .99; */
+}
+
+@keyframes jelly3float {
+  from{top: 2.4vw;}
+  to{top: 3.1vw;}
+}
+
+#j3-trans {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  /* opacity: .89; */
+}
+
+#j3-fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.19
+  /* z-index: 0; */
+}
+
+@media (max-aspect-ratio: 3/4) {
+  body {
+    background-color: red;
+  }
 }
