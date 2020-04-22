@@ -22,6 +22,7 @@ STYLING NOTES
   --home-page-padding: 30px;
   --min-view-height: 400px;
   --min-view-width: calc(400px * 160/89);
+  --side-bar-height-mb: 60px;
 }
 
 body {
@@ -57,6 +58,22 @@ a {
   display: flex;
 }
 
+@media (max-aspect-ratio: 3/4) {
+  #app-container {
+    flex-direction: column;
+    /* justify-content: space-between; */
+    overflow-y: hidden;
+  }
+  #home-page {
+    /* top: 30vh; */
+    border: solid 1px black;
+    height: 90vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+  }
+}
 /* @media (min-aspect-ratio: 160/89) {
   #home-page {
     font-size: max(30.4vh, calc(var(--min-view-height) * 0.304));
@@ -77,6 +94,7 @@ a {
 
 @media (min-height: 400px) and (min-width: 719.1px) and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 160/89) {
   #home-page {
+    overflow-x: hidden;
     font-size: 16.91vw;
   }
 }
@@ -369,12 +387,9 @@ textarea::-webkit-scrollbar {
 /*--------------QUICK LINKS--------------*/
 #side-bar {
   position: fixed;
-  /* color: white; */
   height: 100vh;
   min-height: 300px;
   width: var(--side-bar-width);
-  min-width: 50px;
-  max-width: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -400,6 +415,32 @@ textarea::-webkit-scrollbar {
 .quick-link-icon {
   width: 50%;
   height: 100%;
+}
+
+@media (max-aspect-ratio: 3/4) {
+  #side-bar {
+    /* position: fixed; */
+    position: relative;
+    width: 100vw;
+    height: 7vh;
+    min-height: var(--side-bar-height-mb);
+    flex-direction: row;
+    overflow-y: hidden;
+  }
+  #side-bar-content {
+    height: calc(var(--side-bar-height-mb) * 0.5);
+    width: 40%;
+    min-width: 240px;
+    min-height: 0px;
+    align-self: center;
+    flex-direction: row;
+  }
+  .quick-link {
+    /* flex-direction: column; */
+  }
+  .quick-link-icon {
+    width: 30px;
+  }
 }
 
 /*--------------JELLYFISH--------------*/

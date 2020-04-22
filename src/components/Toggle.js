@@ -4,7 +4,7 @@ import {useSpring, animated} from 'react-spring'
 import classNames from 'classnames'
 
 const Toggle = memo(({ children, name, isOpen/* = false*/, handleClick }) => {
-  
+  console.log('open?',name, isOpen)
   const [bind, { height: viewHeight}] = useMeasure()
   
   const { height, opacity } = useSpring({
