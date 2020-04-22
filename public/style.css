@@ -74,17 +74,6 @@ a {
     overflow-y: scroll;
   }
 }
-/* @media (min-aspect-ratio: 160/89) {
-  #home-page {
-    font-size: max(30.4vh, calc(var(--min-view-height) * 0.304));
-  }
-}
-
-@media (min-aspect-ratio: 3/4) and (max-aspect-ratio: 160/89) {
-  #home-page {
-    font-size: max(16.9vw, calc(var(--min-view-width) * 0.169))
-  }
-} */
 
 @media (max-height: 400px), (max-width: 719.1px) {
   #home-page {
@@ -94,7 +83,7 @@ a {
 
 @media (min-height: 400px) and (min-width: 719.1px) and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 160/89) {
   #home-page {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-size: 16.91vw;
   }
 }

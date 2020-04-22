@@ -9,26 +9,25 @@ const Home = () => {
   const handleClick = (e, id) => {
     show && show === e.target.title ? setShow('') : setShow(e.target.title)
 
-    setTimeout(() => {
-      $('html, body').animate({
-        scrollTop: $(`#${id}`).offset().top
-      }, 1200)
-    }, 1100)
+    // setTimeout(() => {
+    //   $('html, #home-page').animate({
+    //     scrollTop: $(`#${id}`).offset().top
+    //     // scrollTop: 50
+    //   }, 1200)
+    // }, 1100)
   }
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     // console.log('show', show)
-  //     // debugger
-  //     show ? 
-  //     $('html, #home-page').animate({
-  //       scrollTop: $(`#${show}`).offset().top
-  //     }, 1200) :
-  //     $('html, #home-page').animate({
-  //       scrollTop: $(`#PROJECTS`).offset().top
-  //     }, 1200)
-  //   }, 3000)
-  // })
+  useEffect(() => {
+    setTimeout(() => {
+      show ? 
+      $('html, #home-page').animate({
+        scrollTop: $(`#${show}`).offset().top
+      }, 1200) :
+      $('html, #home-page').animate({
+        scrollTop: $(`#PROJECTS`).offset().top
+      }, 1200)
+    }, 1100)
+  })
   
   return(
     <div id='home-page'>
