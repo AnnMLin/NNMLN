@@ -18,6 +18,7 @@ const Home = () => {
   }
 
   useEffect(() => {
+    console.log('show', show)
     setTimeout(() => {
       show ? 
       $('html, #home-page').animate({
