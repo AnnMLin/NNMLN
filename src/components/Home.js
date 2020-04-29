@@ -27,7 +27,13 @@ const Home = () => {
       $('html, #home-page').animate({
         scrollTop: $(`#PROJECTS`).offset().top
       }, 1200)
-    }, 1100)
+
+      // if(show){
+      //   $('html, #home-page').animate({
+      //     scrollTop: $(`#${show}`).offset().top
+      //   }, 1200)
+      // }
+    }, 1500)
   })
   
   return(
@@ -42,6 +48,10 @@ const Home = () => {
         <Toggle name='CONTACT' handleClick={handleClick} isOpen={show === 'CONTACT'}>
           <Contact />
         </Toggle>
+        <div id='logo-container'>
+          <img id='logo' src={process.env.PUBLIC_URL +  '/images/head.png'} alt=''/>
+          <div className='logo-fill'></div>
+        </div>
       </div>
     </div>
   )
