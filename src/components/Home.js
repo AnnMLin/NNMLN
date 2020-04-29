@@ -49,7 +49,7 @@ const Home = () => {
           <Contact />
         </Toggle>
         <div id='logo-container'>
-          <img id='logo' src={process.env.PUBLIC_URL +  '/images/head.png'} alt=''/>
+          <img id='logo' src={process.env.PUBLIC_URL +  '/images/jelly.png'} alt=''/>
           <div className='logo-fill'></div>
         </div>
       </div>

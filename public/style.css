@@ -107,6 +107,11 @@ a {
   display: none;
 }
 
+#logo {
+  position: relative;
+  animation: jellyfloat 5s ease-in-out infinite alternate;
+}
+
 @media (max-aspect-ratio: 3/4) {
   #logo-container {
     display: flex;
@@ -118,10 +123,21 @@ a {
     align-items: center;
   }
   #logo{
-    height: 30vw;
+    height: 40vw;
   }
   .logo-fill {
     margin: 30px;
+  }
+  @keyframes jellyfloat {
+    from {top: 0px;}
+    to {top: 50px;}
+  }
+}
+
+@media (max-aspect-ratio: 3/4) and (min-height: 1000px) {
+  @keyframes jellyfloat {
+    from {top: 0px;}
+    to {top: 150px;}
   }
 }
 
@@ -137,7 +153,11 @@ a {
     right: 0;
   }
   #logo{
-    width: 150px;
+    width: 200px;
+  }
+  @keyframes jellyfloat {
+    from {top: -50px;}
+    to {top: 50px;}
   }
 }
 
