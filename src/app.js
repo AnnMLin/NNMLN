@@ -4,8 +4,8 @@ import { Sidebar, Home, Jellyfish } from './components'
 const App = () => {
   return (
     <div id='app-container'>
-      <Sidebar />
       <Home />
+      <Sidebar />
       {/* <Jellyfish /> */}
     </div>
   )
