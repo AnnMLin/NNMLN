@@ -321,7 +321,7 @@ a {
   }
   .project-card {
     /* background: rgba(158, 196, 231, 0.5); */
-    background: rgb(199, 217, 233);
+    background: rgb(206, 225, 243);
     border-radius: .3em;
   }
 }
@@ -557,7 +557,7 @@ textarea::-webkit-scrollbar {
 
 @media (max-aspect-ratio: 3/4) {
   .form-item{
-    background: rgb(198, 228, 241);
+    background: rgb(206, 225, 243);
   }
   #info-container {
     flex-direction: column;
