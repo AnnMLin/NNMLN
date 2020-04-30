@@ -8,32 +8,24 @@ const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
 
 const ContactForm = () => {
 
-  const [state, setState] = useState({name: '', email: '', msg: '', warning:''})
+  const [state, setState] = useState({name: '', email: '', msg: '', warning:'', submitted:''})
 
   const handleChange = e => {
     setState({...state, [e.target.name]: e.target.value})
   }
 
   const handleClear = () => {
-    setState({name: '', email: '', msg: '', warning:''})
+    setState({name: '', email: '', msg: '', warning:'', submitted: ''})
   }
 
   const handleSubmit = e => {
     e.preventDefault()
     if(!state.name || !state.msg || !state.email) {
-      setState({...state, warning: 'All fields required *'})
+      setState({...state, warning: 'All fields required *', submitted: ''})
       return
     }
-    // if(!state.msg) {
-    //   setState({...state, warning: 'All fields required *'})
-    //   return
-    // }
-    // if(!state.email) {
-    //   setState({...state, warning: 'All fields required *'})
-    //   return
-    // }
     if(!validateEmail(state.email)) {
-      setState({...state, warning: 'Please enter a valid email *'})
+      setState({...state, warning: 'Please enter a valid email *', submitted: ''})
       return
     }
     console.log('Submit!')
@@ -47,9 +39,6 @@ const ContactForm = () => {
     return expression.test(String(email).toLowerCase())
   }
 
-  // const validateEmail = (str) => {
-  // }
-
   const sendMsg = () => {
     const formData = new FormData()
     formData.append(GOOGLE_FORM_MESSAGE_ID, state.msg)
@@ -59,7 +48,7 @@ const ContactForm = () => {
       .post(CORS_PROXY + GOOGLE_FORM_ACTION_URL, formData)
       .then(() => {
         console.log('SUCCESS!')
-        setState({name: '', email: '', msg: ''})
+        setState({name: '', email: '', msg: '', warning: '', submitted: 'Message submitted!'})
       })
       .catch((error)=>{
         console.log(error)
@@ -92,6 +81,10 @@ const ContactForm = () => {
         </div>
         {state.warning ? 
         <div className='warning'>{state.warning}</div>
+        : null
+        }
+        {state.submitted ?
+        <div className='submitted'>{state.submitted}</div>
         : null
         }
       </div>
