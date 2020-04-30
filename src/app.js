@@ -1,12 +1,11 @@
 import React from 'react'
-import { Sidebar, Home, Jellyfish } from './components'
+import { Sidebar, Home} from './components'
 
 const App = () => {
   return (
     <div id='app-container'>
       <Home />
       <Sidebar />
-      {/* <Jellyfish /> */}
     </div>
   )
 }

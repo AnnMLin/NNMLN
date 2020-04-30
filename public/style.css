@@ -1,9 +1,3 @@
-/* COLOR CODES
-#EFDCBC #C2C5B0 #D6B5A2 #557580
-#B5A162 #D0B48D #CBC29B #A24D38 #2D3424
-#0D5661 #9F353A #D7B98E #4F726C
-*/
-
 /*
 STYLING NOTES
 - side bar width is 4vw
@@ -13,7 +7,6 @@ STYLING NOTES
 */
 
 :root {
-  /* --side-bar-width: 4vw; */
   --side-bar-width: 50px;
   --content-padding: 13px;
   /* --content-padding: 1vw; */
@@ -29,8 +22,6 @@ body {
   background-color: rgb(158, 196, 231);
   margin: 0px;
   font-family: 'Questrial', sans-serif;
-  /* min-height: 225px; */
-  /* min-width: 200vh; */
 }
 
 div {
@@ -78,7 +69,6 @@ a {
 
 @media (max-aspect-ratio: 3/4) {
   #side-bar {
-    /* background: red; */
     background-color: rgb(158, 196, 231);
     position: fixed;
     bottom: 0;
@@ -116,7 +106,6 @@ a {
   #logo-container {
     display: flex;
     flex-direction: column;
-    /* z-index: 10; */
     width: 100vw;
     height: 40vh;
     justify-content: center;
@@ -168,7 +157,6 @@ a {
 }
 
 #home-page {
-  /* border: solid 1px red; */
   height: 100vh;
   width: var(--home-page-width);
   margin-left: var(--side-bar-width);
@@ -183,9 +171,7 @@ a {
   }
   #home-page {
     position: fixed;
-    /* background: yellowgreen; */
     height: calc(93vh - .2em);
-    /* height: 30px; */
     max-height: calc(100vh - var(--side-bar-height-mb) - .2em);
     width: 100vw;
     margin-left: 0;
@@ -204,7 +190,6 @@ a {
 
 @media (min-height: 400px) and (min-width: 719.1px) and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 160/89) {
   #home-page {
-    /* overflow-x: hidden; */
     font-size: 16.91vw;
   }
 }
@@ -274,7 +259,6 @@ a {
 }
 
 .content-container {
-  /* border: solid 1px red; */
   padding: 5em 20px 0 20px;
   width: 82vw;
   min-width: calc(var(--min-view-width) * 0.82);
@@ -313,14 +297,7 @@ a {
 }
 
 @media (max-aspect-ratio: 3/4) {
-  .projects-container {
-    /* flex-direction: column; */
-    /* flex-wrap: nowrap; */
-    /* align-items: center; */
-    /* align-content: none; */
-  }
   .project-card {
-    /* background: rgba(158, 196, 231, 0.5); */
     background: rgb(206, 225, 243);
     border-radius: .3em;
   }
@@ -356,10 +333,6 @@ a {
   align-content: flex-start;
   flex-wrap: wrap;
 }
-
-/* .tech-item {
-  font-size: 15px;
-} */
 
 .tech-keyword {
   margin: 0.1em;
@@ -447,17 +420,12 @@ a {
 
 @media (max-aspect-ratio: 3/4) {
   .contact-item {
-    /* margin-left: 3vw; */
     width: 88%;
   }
 }
 
 .space {
   height: 1em;
-}
-
-.text {
-  /* padding: var(--content-padding); */
 }
 
 /*--------------CONTACT FORM--------------*/
@@ -498,6 +466,12 @@ a {
 
 .warning {
   color: red;
+  font-size: .8em;
+  display: flex;
+  align-self: center;
+}
+
+.submitted {
   font-size: .8em;
   display: flex;
   align-self: center;
@@ -573,99 +547,12 @@ textarea::-webkit-scrollbar {
   }
   .btn {
     width: 5em;
+    background-color: rgb(241, 247, 252);
   }
-}
-
-/*--------------JELLYFISH--------------*/
-.aquarium > * img {
-  max-width: 100%;
-  max-height: 100%;
-  /* filter: grayscale(50%) */
-}
-
-.j1-item {
-  position: fixed;
-  /* border: solid; */
-  top: 5.5vw;
-  left: 4vw;
-  width: 23vw;
-  height: auto;
-  z-index: -1;
-  animation: jelly1float 5s ease-in-out 0.39s infinite alternate;
-}
-
-@keyframes jelly1float {
-  from{top: 5.5vw; left: 5.4vw;}
-  to{top: 6.3vw; left: 3.3vw;}
-}
-
-.j2-item {
-  position: fixed;
-  /* border: solid; */
-  top: 25vw;
-  left: 50vw;
-  width: 30vw;
-  height: auto;
-  z-index: 1;
-  animation: jelly2float 2s ease-in-out infinite alternate;
-  /* opacity: .99; */
-}
-
-@keyframes jelly2float {
-  from{top: 25vw; left: 50vw;}
-  to{top: 28vw; left: 51vw;}
-}
-
-#j2-trans {
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  /* z-index: 1; */
-}
-
-#j2-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.39
-  /* z-index: 0; */
-}
-
-.j3-item {
-  position: fixed;
-  /* border: solid; */
-  top: 2.7vw;
-  right: 0;
-  width: 37vw;
-  height: 30vw;
-  z-index: 1;
-  animation: jelly3float 2.9s ease-in-out 0.5s infinite alternate-reverse;
-  /* opacity: .99; */
-}
-
-@keyframes jelly3float {
-  from{top: 2.4vw;}
-  to{top: 3.1vw;}
-}
-
-#j3-trans {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  /* opacity: .89; */
-}
-
-#j3-fill {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0.19
-  /* z-index: 0; */
-}
-
-@media (max-aspect-ratio: 3/4) {
-  body {
-    /* background-color: red; */
+  input {
+    background-color: rgb(241, 247, 252)
+  }
+  textarea {
+    background-color: rgb(241, 247, 252)
   }
 }
