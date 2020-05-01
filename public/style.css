@@ -102,6 +102,20 @@ a {
   animation: jellyfloat 5s ease-in-out infinite alternate;
 }
 
+.fade-in-out {
+  animation: jellyShow 2s linear;
+}
+
+@keyframes jellyShow {
+  from {opacity: 0;}
+  to {opacity: 100;}
+}
+
+@keyframes jellyGo {
+  from {opacity: 100;}
+  to {opacity: 0;}
+}
+
 @media (max-aspect-ratio: 3/4) {
   #logo-container {
     display: flex;
