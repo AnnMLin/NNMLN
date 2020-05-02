@@ -6,19 +6,11 @@ const Home = () => {
   
   const [show, setShow] = useState('')
   
-  const handleClick = (e, id) => {
+  const handleClick = (e) => {
     show && show === e.target.title ? setShow('') : setShow(e.target.title)
-
-    // setTimeout(() => {
-    //   $('html, #home-page').animate({
-    //     scrollTop: $(`#${id}`).offset().top
-    //     // scrollTop: 50
-    //   }, 1200)
-    // }, 1100)
   }
 
   useEffect(() => {
-    // console.log('show', show)
     setTimeout(() => {
       show ? 
       $('html, #home-page').animate({
@@ -27,12 +19,6 @@ const Home = () => {
       $('html, #home-page').animate({
         scrollTop: $(`#PROJECTS`).offset().top
       }, 1200)
-
-      // if(show){
-      //   $('html, #home-page').animate({
-      //     scrollTop: $(`#${show}`).offset().top
-      //   }, 1200)
-      // }
     }, 1500)
   })
   

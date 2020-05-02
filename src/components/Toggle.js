@@ -17,7 +17,7 @@ const Toggle = memo(({ children, name, isOpen/* = false*/, handleClick }) => {
     <div id={`${name}`} className='big-letters'>
       <div className={classNames('big-letters-link', {isOpen})}>
         <div className='big-letters-container'>
-          <span className='big-letters-inner-text' onClick={(e) => handleClick(e, name)} title={name}>{name}</span>
+          <span className='big-letters-inner-text' onClick={(e) => handleClick(e)} title={name}>{name}</span>
         </div>
       </div>
       <animated.div className='animated-div' style={{ opacity, height }}>
