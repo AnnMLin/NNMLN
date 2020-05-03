@@ -9,11 +9,19 @@ const About = () => {
           <img className='headshot' src={image} alt=''/>
         </div>
         <div className='info-field'>
-          <p>Hi! I'm Ann</p>
-          <p>Full-stack software engineer with backgrounds in architectural design, parametric design, and dance.</p>
-          <p>New York City via Munich, London, Taiwan, and Oklahoma.</p>
-          <p>I work at the intersection of science, technology, and design. Experimental personality with lots of interests. Always looking for inspirations.</p>
-          <p>Outside of coding, I make line drawings, teach adult dance classes, perform, and was named finalists in multiple dance competitions in the US and internationally. I've built a single family housing prototype with my team in Colombia, South America, was part of an exhibition at the Swiss Pavilion at Venice Biennale 2014, and performed at Pole Theatre Iceland.</p>
+          <div id='headline'>A creative problem solver working at the intersection of technology and art.</div>
+          <div>
+            <p>Hi, I'm Ann.</p>
+            <p>Before becoming a full stack engineer, I was a junior architect, a parametric designer, and a visual programmer. I used to solve problems in architecture, now I solve problems in web development.</p>
+            {/* <p>New York City via London, Taiwan, and Oklahoma.</p> */}
+            <p>Things I'm good at:<br/>
+            Cross-disciplinary teamwork. Visual/verbal communication. Critical thinking. Drawing. Dancing.</p>
+            <p>Things I'm not good at:<br/>
+            Baking.</p>
+            <p>Open to any and all projects and collaborations.</p>
+            <p>Connect with me at <a href='https://www.linkedin.com/in/ann-m-lin' target='_blank'>Linkedin</a>.</p>
+            <p>Download my <a href={process.env.PUBLIC_URL + "/docs/AnnLinResume.pdf"} target='_blank'>resume</a>.</p>
+          </div>
         </div>
       </div>
     </div> 

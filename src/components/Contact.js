@@ -9,7 +9,7 @@ const Contact = () => {
         <div className='space'></div>
         <ContactForm />
         <div className='space'></div>
-        <div className='text'>Or contact me at hello@annmlin.com</div>
+        <div className='text'>Or contact me at <a href='mailto:hello@annmlin.com'>hello@annmlin.com</a></div>
       </div>
     </div> 
   )

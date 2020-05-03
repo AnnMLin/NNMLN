@@ -31,7 +31,7 @@ div {
 a {
   color: inherit;
   text-decoration: inherit;
-  display: block;
+  /* display: block; */
 }
 
 /*--------------QUICK LINKS--------------*/
@@ -67,7 +67,7 @@ a {
   height: 100%;
 }
 
-@media (max-aspect-ratio: 3/4) {
+@media (max-aspect-ratio: 33/40) {
   #side-bar {
     background-color: rgb(158, 196, 231);
     position: fixed;
@@ -116,7 +116,7 @@ a {
   to {opacity: 0;}
 }
 
-@media (max-aspect-ratio: 3/4) {
+@media (max-aspect-ratio: 33/40) {
   #logo-container {
     display: flex;
     flex-direction: column;
@@ -137,7 +137,7 @@ a {
   }
 }
 
-@media (max-aspect-ratio: 3/4) and (min-height: 1000px) {
+@media (max-aspect-ratio: 33/40) and (min-height: 1000px) {
   @keyframes jellyfloat {
     from {top: 0px;}
     to {top: 150px;}
@@ -178,7 +178,7 @@ a {
   display: flex;
 }
 
-@media (max-aspect-ratio: 3/4) {
+@media (max-aspect-ratio: 33/40) {
   #app-container {
     flex-direction: column;
     overflow-y: hidden;
@@ -196,13 +196,13 @@ a {
   }
 }
 
-@media (max-height: 400px), (max-width: 719.1px) and (min-aspect-ratio: 3/4) {
+@media (max-height: 400px), (max-width: 719.1px) and (min-aspect-ratio: 33/40) {
   #home-page {
     font-size: calc(var(--min-view-height) * 0.304);
   }
 }
 
-@media (min-height: 400px) and (min-width: 719.1px) and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 160/89) {
+@media (min-height: 400px) and (min-width: 719.1px) and (min-aspect-ratio: 33/40) and (max-aspect-ratio: 160/89) {
   #home-page {
     font-size: 16.91vw;
   }
@@ -242,7 +242,7 @@ a {
   overflow: hidden;
 }
 
-@media (max-aspect-ratio: 3/4) {
+@media (max-aspect-ratio: 33/40) {
   .big-letters-container{
     padding-left: .4em;
   }
@@ -278,7 +278,7 @@ a {
   min-width: calc(var(--min-view-width) * 0.82);
 }
 
-@media (max-aspect-ratio: 3/4) {
+@media (max-aspect-ratio: 33/40) {
   .content-container {
     min-width: 0;
     width: 100vw;
@@ -310,7 +310,7 @@ a {
   margin: 20px;
 }
 
-@media (max-aspect-ratio: 3/4) {
+@media (max-aspect-ratio: 33/40) {
   .project-card {
     background: rgb(206, 225, 243);
     border-radius: .3em;
@@ -378,7 +378,7 @@ a {
   margin: 20px;
 }
 
-@media (max-aspect-ratio: 3/4) {
+@media (max-aspect-ratio: 33/40) {
   .auto-fill {
     margin: 3px 20px;
   }
@@ -408,7 +408,16 @@ a {
   margin-left: 5em;
 }
 
-@media (max-aspect-ratio: 3/4) {
+.info-field a {
+  font-weight: bold;
+}
+
+#headline {
+  font-family: 'Caveat', cursive;
+  font-size: 3vw;
+}
+
+@media (max-aspect-ratio:33/40) {
   .about-item {
     flex-direction: column;
     justify-content: none;
@@ -422,6 +431,12 @@ a {
     width: 88%;
     margin-left: 0;
     padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #headline {
+    font-size: 4vh;
+    /* align-self: center; */
   }
 }
 
@@ -432,7 +447,7 @@ a {
   padding: var(--content-padding);
 }
 
-@media (max-aspect-ratio: 3/4) {
+@media (max-aspect-ratio: 33/40) {
   .contact-item {
     width: 88%;
   }
@@ -543,7 +558,7 @@ textarea::-webkit-scrollbar {
   cursor: pointer;
 }
 
-@media (max-aspect-ratio: 3/4) {
+@media (max-aspect-ratio: 33/40) {
   .form-item{
     background: rgb(206, 225, 243);
   }
