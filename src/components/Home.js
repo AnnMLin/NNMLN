@@ -10,6 +10,7 @@ const Home = () => {
     show && show === e.target.title ? setShow('') : setShow(e.target.title)
   }
 
+  //BUG HERE: [on mobile] when clicked on toggle with a minus top value, scrollTop breaks
   useEffect(() => {
     setTimeout(() => {
       show ? 
