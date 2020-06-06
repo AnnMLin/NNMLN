@@ -3,6 +3,13 @@ import { ProjectItem } from '../components'
 
 const Projects = () => {
   const projects = [ 
+    { title: 'Berries-and-Hay',
+      image: process.env.PUBLIC_URL + '/images/berries-hay.png',
+      desc: `A responsive SPA for stock portfolio that allows users to log in, buy shares, view transactions, and review performance.`,
+      tech: ['React', 'Redux', 'Express', 'Sequelize', 'PostgreSQL','NodeJS', 'Javascript', 'HTML', 'CSS'],
+      gitHubLink: 'https://github.com/AnnMLin/Berries-and-Hay',
+      link: 'https://berries-and-hay.herokuapp.com'
+    },
     { title: 'NNMLN',
       image: process.env.PUBLIC_URL + '/images/nnmln-bw.png',
       desc: `A single page app using React’s component architecture, focused on front end effects and animation.`,
