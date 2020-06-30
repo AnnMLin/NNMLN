@@ -19,7 +19,8 @@ STYLING NOTES
 }
 
 body {
-  background-color: rgb(158, 196, 231);
+  /* background-color: rgb(158, 196, 231); */
+  background-color: rgb(200, 225, 245);
   margin: 0px;
   font-family: 'Questrial', sans-serif;
 }
