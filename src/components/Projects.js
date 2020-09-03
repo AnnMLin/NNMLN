@@ -3,10 +3,17 @@ import { ProjectItem } from '../components'
 
 const Projects = () => {
   const projects = [ 
+    { title: 'GH User Search',
+      image: process.env.PUBLIC_URL + '/images/ghus.png',
+      desc: `A single page app that allows users to search Github users, add search filters, and view a paginated list of results.`,
+      tech: ['React', 'React Router', 'Redux', 'Javascript', 'NodeJS', 'HTML', 'CSS', 'RestAPI'],
+      gitHubLink: 'https://github.com/AnnMLin/githubUserSearch',
+      link: 'https://ghUserSearch.annmlin.com'
+    },
     { title: 'Berries-and-Hay',
       image: process.env.PUBLIC_URL + '/images/berries-hay.png',
       desc: `A responsive SPA for stock portfolio that allows users to log in, buy shares, view transactions, and review performance.`,
-      tech: ['React', 'Redux', 'Express', 'Sequelize', 'PostgreSQL','NodeJS', 'Javascript', 'HTML', 'CSS'],
+      tech: ['React', 'React Router', 'Redux', 'Express', 'Sequelize', 'PostgreSQL','NodeJS', 'Javascript', 'HTML', 'CSS', 'RestAPI'],
       gitHubLink: 'https://github.com/AnnMLin/Berries-and-Hay',
       link: 'https://berries-and-hay.herokuapp.com'
     },

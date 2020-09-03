@@ -16,10 +16,10 @@ project card mobile bg: background: rgb(206, 225, 243);
 
 /*
 cyberpunk color theme:
-#e2dddf
-#85ebd9
-#ff2a6d
-#2f404d
+#e2dddf light grey
+#85ebd9 green
+#ff2a6d pink
+#2f404d dark bg
 project card mobile bg: background: rgb(68, 83, 95);
 highlight text: color: rgb(154, 157, 164);
 */
@@ -40,7 +40,8 @@ body {
   background-color: rgb(47, 64, 77);
   margin: 0px;
   font-family: 'Questrial', sans-serif;
-  color: rgb(226, 221, 223, .6);
+  /* color: rgb(226, 221, 223, .6); */
+  color: rgb(226, 221, 223);
 }
 
 div {
@@ -234,7 +235,8 @@ a {
 
 /*--------------TOGGLES--------------*/
 .big-letters {
-  padding: 0.2em 0;
+  /* padding: 0.2em 0; //original*/ 
+  padding: 0.1em 0;
   margin: 0 0;
 }
 
@@ -246,12 +248,13 @@ a {
 
 .big-letters-link::before {
   content: '';
-  margin: -0.075em;
+  margin: -0.085em;
+  /* margin: -0.12em; */
 }
 
 .big-letters-link::after {
   content: '';
-  margin: -0.095em;
+  margin: -0.085em;
 }
 
 .big-letters-container {
@@ -273,6 +276,9 @@ a {
 
 .big-letters-inner-text {
   color: rgb(255, 42, 109);
+  /* font-family: 'Long Cang', cursive; */
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-family: 'Righteous', cursive;
 }
 
 .big-letters-inner-text:hover {
@@ -435,13 +441,16 @@ a {
 
 .info-field a {
   font-weight: bold;
-  color: rgb(226, 221, 223, .6);
+  color: rgb(226, 221, 223);
 }
 
 #headline {
-  font-family: 'Caveat', cursive;
+  /* font-family: 'Caveat', cursive; */
+  /* font-family: 'Shadows Into Light', cursive; */
+  /* font-family: 'Long Cang', cursive; */
+  font-family: 'Righteous', cursive;
   font-size: 3vw;
-  color: rgb(226, 221, 223, .6);
+  color: rgb(226, 221, 223);
 }
 
 @media (max-aspect-ratio:33/40) {
@@ -462,11 +471,11 @@ a {
     flex-direction: column;
   }
   .info-field a {
-    color: rgb(154, 157, 164);
+    /* color: rgb(154, 157, 164); */
   }
   #headline {
     font-size: 4vh;
-    color: rgb(154, 157, 164);
+    /* color: rgb(154, 157, 164); */
   }
 }
 
@@ -480,7 +489,7 @@ a {
 @media (max-aspect-ratio: 33/40) {
   .contact-item {
     width: 88%;
-    color: rgb(154, 157, 164);
+    /* color: rgb(154, 157, 164); */
   }
 }
 
