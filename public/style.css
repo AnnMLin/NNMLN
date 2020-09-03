@@ -6,6 +6,24 @@ STYLING NOTES
 - content container only paddings
 */
 
+/*
+baby blue color theme:
+background-color: rgb(158, 196, 231);
+color: black;
+project card bg:  background: rgb(255,255,255,.5);
+project card mobile bg: background: rgb(206, 225, 243);
+*/
+
+/*
+cyberpunk color theme:
+#e2dddf
+#85ebd9
+#ff2a6d
+#2f404d
+project card mobile bg: background: rgb(68, 83, 95);
+highlight text: color: rgb(154, 157, 164);
+*/
+
 :root {
   --side-bar-width: 50px;
   --content-padding: 13px;
@@ -19,9 +37,10 @@ STYLING NOTES
 }
 
 body {
-  background-color: rgb(158, 196, 231);
+  background-color: rgb(47, 64, 77);
   margin: 0px;
   font-family: 'Questrial', sans-serif;
+  color: rgb(226, 221, 223, .6);
 }
 
 div {
@@ -31,7 +50,6 @@ div {
 a {
   color: inherit;
   text-decoration: inherit;
-  /* display: block; */
 }
 
 /*--------------QUICK LINKS--------------*/
@@ -69,7 +87,6 @@ a {
 
 @media (max-aspect-ratio: 33/40) {
   #side-bar {
-    background-color: rgb(158, 196, 231);
     position: fixed;
     bottom: 0;
     width: 100vw;
@@ -77,6 +94,7 @@ a {
     min-height: var(--side-bar-height-mb);
     flex-direction: row;
     overflow-y: hidden;
+    background-image: linear-gradient(to bottom, transparent, rgb(47, 64, 77));
   }
   #side-bar-content {
     height: calc(var(--side-bar-height-mb) * 0.5);
@@ -253,9 +271,13 @@ a {
   content: '';
 }
 
+.big-letters-inner-text {
+  color: rgb(255, 42, 109);
+}
+
 .big-letters-inner-text:hover {
   position: relative;
-  color: white;
+  color: rgb(133, 235, 217);
   cursor: pointer;
   z-index: 10;
 }
@@ -305,14 +327,15 @@ a {
 }
 
 .project-card {
-  background: rgb(255,255,255,.5);
+  background: rgb(255,255,255,.1);
   width: 300px;
   margin: 20px;
+  border-radius: .3em;
 }
 
 @media (max-aspect-ratio: 33/40) {
   .project-card {
-    background: rgb(206, 225, 243);
+    background: rgb(68, 83, 95);
     border-radius: .3em;
   }
 }
@@ -331,6 +354,7 @@ a {
 .text-field {
   display: flex;
   flex-direction: column;
+  color: black;
 }
 
 .desc {
@@ -406,15 +430,18 @@ a {
 .info-field {
   width: calc(100% - 20vw - 5em);
   margin-left: 5em;
+  color: black;
 }
 
 .info-field a {
   font-weight: bold;
+  color: rgb(226, 221, 223, .6);
 }
 
 #headline {
   font-family: 'Caveat', cursive;
   font-size: 3vw;
+  color: rgb(226, 221, 223, .6);
 }
 
 @media (max-aspect-ratio:33/40) {
@@ -434,9 +461,12 @@ a {
     display: flex;
     flex-direction: column;
   }
+  .info-field a {
+    color: rgb(154, 157, 164);
+  }
   #headline {
     font-size: 4vh;
-    /* align-self: center; */
+    color: rgb(154, 157, 164);
   }
 }
 
@@ -450,6 +480,7 @@ a {
 @media (max-aspect-ratio: 33/40) {
   .contact-item {
     width: 88%;
+    color: rgb(154, 157, 164);
   }
 }
 
@@ -459,10 +490,11 @@ a {
 
 /*--------------CONTACT FORM--------------*/
 .form-item {
-  background: rgb(255,255,255,.5);
+  background: rgb(255,255,255,.1);
   width: 88%;
   padding: var(--content-padding);
   border-radius: .3em;
+  /* color: black; */
 }
 
 #info-container {
@@ -551,6 +583,7 @@ textarea::-webkit-scrollbar {
   align-items: center;
   margin-right: var(--content-padding);
   box-sizing: border-box;
+  color: black;
 }
 
 .btn:hover {
@@ -560,7 +593,7 @@ textarea::-webkit-scrollbar {
 
 @media (max-aspect-ratio: 33/40) {
   .form-item{
-    background: rgb(206, 225, 243);
+    background: rgb(68, 83, 95);
   }
   #info-container {
     flex-direction: column;

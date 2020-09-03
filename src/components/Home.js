@@ -36,7 +36,7 @@ const Home = () => {
           <Contact />
         </Toggle>
         <div id='logo-container' className='fade-in-out'>
-          <img id='logo' src={process.env.PUBLIC_URL +  '/images/jelly.png'} alt=''/>
+          {/* <img id='logo' src={process.env.PUBLIC_URL +  '/images/jelly.png'} alt=''/> */}
           <div className='logo-fill'></div>
         </div>
       </div>
